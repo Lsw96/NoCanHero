@@ -1,37 +1,40 @@
-:root { 
-    /* font-family */
-    --font-zenDots: "Zen Dots", cursive;
-    --font-pretendard: "Pretendard Variable";
-    --font-nanumPen: "Nanum Pen Script", cursive;
+@font-face {
+    font-family: "DXHmchL";
+    src: url("../assets/fonts/dxhmchl-kscpc-euc-h.ttf") format("truetype"),
+    url("../assets/fonts/dxhmchl-kscpc-euc-h-webfont.woff2") format("woff2"),
+    url("../assets/fonts/dxhmchl-kscpc-euc-h-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 
-    /* font-size */
-    --font-size-xx-large: 6.4rem;
-    --font-size-x-large: 4.8rem;
-    --font-size-large: 3.8rem;
-    --font-size-larger: 2.8rem;
-    --font-size-medium: 2.4rem;
-    --font-size-small: 1.6rem;
-    --font-size-micro: 1.2rem;
-
+:root {
     /* color */
-    --color-backGround: #e6e6e9 ;
-    --color-black: #1A1A1E;
-    --color-dimGray: #504f56;
-    --color-darkGray: #7D7B8B;
-    --color-lightGray: #a8a8ac;
-    --color-white: #F2F2F2;
-    --color-darkBlue: #2E2B3D;
-    --color-deepGreen: #496355;
-    --color-green: #339862;
-    --color-lightGreen: #79BF7B;
-    --color-yellow: #F5B95B;
-    --color-lightYellow: rgb(226, 226, 153);
-
+    --color-black: #212121;
+    --color-gray-3: #495057;
+    --color-gray-2: #606060;
+    --color-gray-1: #e9ecef;
+    --color-white: #f8f9fa;
 }
 
 /* COMMON
 ==================================================================*/
 html { font-size: 62.5%; font-weight: 400; line-height: 1.5; scroll-behavior: smooth; }
-body { overflow-x: hidden; box-sizing: border-box; font-family: "Pretendard Variable", sans-serif; color: var(--color-black); background-color: var(--color-black); }
+body { overflow-x: hidden; margin: 0; padding: 0; box-sizing: border-box; font-family: "DXHmchL", "Pretendard Variable", sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; }
 body::-webkit-scrollbar { display: none; }
-html,body { width: 100%; height: 100%; }
+
+/* .square { overflow: hidden; position: absolute; top: 10%; left: 30%; width: 40%; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 50%; background-color: #fff; }
+.square::before { content: ''; display: block; padding-top: 100%; } */
+
+/* svgTitle */
+section.loading { overflow: hidden; width: 100vw; height: 100vh; background-color: #212121; }
+section.loading svg#loading_svg { padding-top: 6em; }
+section.loading path.loading_title { animation: svg 3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s forwards; fill: none; stroke: #fff; stroke-width: 6px;stroke-dasharray: 4690; stroke-dashoffset: 0; }
+@keyframes svg { from { stroke-dashoffset: 4690; } to { stroke-dashoffset: 0; } }
+section.loading .load_text { display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 1em; font-family: "Pretendard Variable"; font-size: 1.75rem; line-height: 1.2; }
+section.loading .load_text span.date { opacity: 0; overflow: hidden; animation: dateName 1.2s linear 1s forwards; color: var(--color-gray-2); font-weight: 100; }
+section.loading .load_text span.name { opacity: 0; overflow: hidden; animation: dateName 1.8s linear 2.2s forwards; color: var(--color-white); font-weight: 200; }
+@keyframes dateName { from { opacity: 0; overflow: hidden; } to { opacity: 1; overflow: visible; } }
+
+/* star */
+section.loading #star { position: absolute; top: 0; left: 0; width: 99vw; height: 99vh; }
+section.loading #star > i { position: absolute; border-radius: 50%; }
