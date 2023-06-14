@@ -26,6 +26,4 @@ abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
 input, select { vertical-align:middle; }
 html { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 img { pointer-events: none; }
-svg { width: 0; height: 0;}
 /* change border colour to suit your needs */
-hr { display:block; height:1px; border:0; border-top:1px solid #cccccc; margin:1em 0; padding:0; }
