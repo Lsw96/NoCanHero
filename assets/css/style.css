@@ -8,31 +8,56 @@
 }
 
 :root {
+    /* font-family */
+    --font-DXHmchL: "DXHmchL", sans-serif;
+    --font-Pretendard: "Pretendard Variable", sans-serif;
+
     /* color */
     --color-black: #212121;
     --color-gray-3: #495057;
     --color-gray-2: #606060;
     --color-gray-1: #e9ecef;
     --color-white: #f8f9fa;
+    --color-background: #070708;
+
+    /* font-size */
+    --font-size-title: max(9.6rem ,min(3vw, 4.8rem));
+    --font-size-xx-large: max(7.2rem, min(3vw, 3.6rem));
+    --font-size-x-large: max(5.6rem, min(3vw, 2.8rem));
+    --font-size-large: max(4.8rem, min(3vw, 2.4rem));
+    --font-size-medium: max(3.6rem,min(3vw, 1.8rem));
+    --font-size-normal: max(3.2rem, min(3vw, 1.6rem));
+    --font-size-small: max(2.8rem, min(3vw, 1.4rem));
+    --font-size-micro: max(2rem, min(3vw, 1rem)); 
 }
-
-/* COMMON
+/*====================================================================
+    COMMON
 ==================================================================*/
-html { font-size: 62.5%; font-weight: 400; line-height: 1.5; scroll-behavior: smooth; }
-body { overflow-x: hidden; margin: 0; padding: 0; box-sizing: border-box; font-family: "DXHmchL", "Pretendard Variable", sans-serif; }
+html { font-size: 62.5%; font-weight: 400; line-height: 1.5; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; scroll-behavior: smooth; }
+html, body { width: 100%; height: 100%; }
+body { overflow-x: hidden; margin: 0; padding: 0; box-sizing: border-box; font-family: "DXHmchL", "Pretendard Variable", sans-serif; background-color: var(--color-background); }
 body::-webkit-scrollbar { display: none; }
-
-/* svgTitle */
-section.loading { overflow: hidden; position: relative; width: 100vw; height: 100vh; background-color: #212121; }
-section.loading svg#loading_svg { padding-top: 6em; position: relative; z-index: 1; }
-section.loading path.loading_title { animation: svg 3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s forwards; fill: none; stroke: #fff; stroke-width: 6px;stroke-dasharray: 4690; stroke-dashoffset: 0; }
+img, canvas { pointer-events: none; }
+/*====================================================================
+    INDEX.HTML
+=======================================================================*/
+section.loading { width: 100vw; height: 100vh; overflow: hidden; position: relative; background-color: var(--color-black); display: flex; flex-direction: column; justify-content: center; align-items: center; }
+section.loading svg#loading_svg { position: relative; z-index: 1; }
+section.loading path.loading_title { animation: svg 3s cubic-bezier(0.39, 0.575, 0.565, 1) 0s forwards; fill: none; stroke: var(--color-white); stroke-width: 6px;stroke-dasharray: 4690; stroke-dashoffset: 0; }
 @keyframes svg { from { stroke-dashoffset: 4690; } to { stroke-dashoffset: 0; } }
-section.loading .load_text { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 1em; font-family: "Pretendard Variable"; font-size: 1.6rem; line-height: 1.2; }
-section.loading .load_text span.date { opacity: 0; overflow: hidden; animation: dateName 1.2s linear 1s forwards; color: var(--color-gray-2); font-weight: 100; }
+section.loading .load_text { padding-bottom: 10%; position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; margin-top: 1em; font-family: "Pretendard Variable"; font-size: max(1vw, min(1.6rem)); line-height: 1.2; }
+section.loading .load_text time { opacity: 0; overflow: hidden; animation: dateName 1.2s linear 1s forwards; color: var(--color-gray-2); font-weight: 100; }
 section.loading .load_text span.name { opacity: 0; overflow: hidden; animation: dateName 1.8s linear 2.2s forwards; color: var(--color-white); font-weight: 200; }
 @keyframes dateName { from { opacity: 0; overflow: hidden; } to { opacity: 1; overflow: visible; } }
+section.loading canvas#stars { position: absolute; top: 0; left: 0; z-index: 0; }
+/*====================================================================
+    TRAUMA.HTML
+=======================================================================*/
+main { width: 100%; max-width: 1920px; height: 3000px; margin: auto; background-color: var(--color-background); border: 1px solid var(--color-black); box-sizing: border-box; }
+#progress-bar { width: 100%; height: 10px; background-color: red; }
+header {  }
+header h1 {  }
+header button { background-color: transparent; outline: none; border: none; cursor: pointer; }
+header button img { max-width: 10%; }
 
-/* star
-section.loading .star { position: absolute; top: 0; left: 0; width: 99vw; height: 99vh;  }
-section.loading .star > i { position: absolute; border-radius: 50%; } */
-canvas#stars { position: absolute; top: 0; left: 0; z-index: 0; }
+
