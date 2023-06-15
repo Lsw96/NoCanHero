@@ -18,17 +18,18 @@
     --color-gray-2: #606060;
     --color-gray-1: #e9ecef;
     --color-white: #f8f9fa;
+    --color-red: #FF0000;
     --color-background: #070708;
 
     /* font-size */
-    --font-size-title: max(9.6rem ,min(3vw, 4.8rem));
-    --font-size-xx-large: max(7.2rem, min(3vw, 3.6rem));
-    --font-size-x-large: max(5.6rem, min(3vw, 2.8rem));
-    --font-size-large: max(4.8rem, min(3vw, 2.4rem));
-    --font-size-medium: max(3.6rem,min(3vw, 1.8rem));
-    --font-size-normal: max(3.2rem, min(3vw, 1.6rem));
-    --font-size-small: max(2.8rem, min(3vw, 1.4rem));
-    --font-size-micro: max(2rem, min(3vw, 1rem)); 
+    --font-size-title: 4.8rem;
+    --font-size-xx-large: 3.6rem;
+    --font-size-x-large: 2.8rem;
+    --font-size-large: 2.4rem;
+    --font-size-medium: 1.8rem;
+    --font-size-normal: 1.6rem;
+    --font-size-small: 1.4rem;
+    --font-size-micro: 1.2rem; 
 }
 /*====================================================================
     COMMON
@@ -36,7 +37,7 @@
 html { font-size: 62.5%; font-weight: 400; line-height: 1.5; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; scroll-behavior: smooth; }
 html, body { width: 100%; height: 100%; }
 body { overflow-x: hidden; margin: 0; padding: 0; box-sizing: border-box; font-family: "DXHmchL", "Pretendard Variable", sans-serif; background-color: var(--color-background); }
-body::-webkit-scrollbar { display: none; }
+/* body::-webkit-scrollbar { display: none; } */
 img, canvas { pointer-events: none; }
 /*====================================================================
     INDEX.HTML
@@ -53,11 +54,31 @@ section.loading canvas#stars { position: absolute; top: 0; left: 0; z-index: 0; 
 /*====================================================================
     TRAUMA.HTML
 =======================================================================*/
-main { width: 100%; max-width: 1920px; height: 3000px; margin: auto; background-color: var(--color-background); border: 1px solid var(--color-black); box-sizing: border-box; }
-#progress-bar { width: 100%; height: 10px; background-color: red; }
-header {  }
-header h1 {  }
-header button { background-color: transparent; outline: none; border: none; cursor: pointer; }
-header button img { max-width: 10%; }
-
-
+main { width: 100%; max-width: 1920px; height: 100%; margin: auto; background-color: var(--color-background); border: 1px solid var(--color-black); box-sizing: border-box; }
+section { width: 100%; }
+header { width: 100%; max-width: 1920px; min-height: 80px; position: fixed; z-index: 1996; display: flex; align-items: center; transition: all 0.35s; background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25)); }
+header .scrollDown { transform: translateY(-93%); }
+header h1 { margin-right: auto; margin-left: 2em; font-size: 4.0rem; color: var(--color-white); letter-spacing: -0.3em; cursor: pointer; }
+header button { padding: 0; background-color: transparent; outline: none; border: none; cursor: pointer; }
+header button img { display: block; width: 38px; height: 32px; margin-left: auto; margin-right: 8rem; pointer-events: auto; }
+#progress-bar { position: absolute; z-index: 1997; bottom: 0; left: 0; width: 0; height: 6px; background-color: rgba(250, 210, 4, 0.5); border-radius: 10px; }
+#topBtn { width: 48px; height: 48px; position: fixed; bottom: 2.5%; right: 4.5%; z-index: 1996; display: flex; justify-content: center; align-items: center; font-size: var(--font-size-small); font-family: var(--font-Pretendard); letter-spacing: 0.025em; background-color: rgba(255, 255, 255, .5); border-radius: 50%; transition: all .35s; }
+#topBtn:hover { background-color: rgba(255, 255, 255, .75); }
+/* visual */
+.visual { position: relative; height: 100vh; max-height: 1080px; background: linear-gradient(to bottom, #FBD204, #29CCCA); }
+.visual .eye-wrap { width: 100%; height: 100%; display: flex; justify-content: center; align-self: center; }
+.visual .eye-wrap img { width: 50%; position: absolute; top: 50%; transform: translateY(-50%); }
+.visual .eye-wrap .eye-box { border-radius: 50%; overflow: hidden; }
+.visual .scroll-down { position: relative; bottom: 20%; left: 50%; transform: translate(20%, -50%); width: 24px; height: 24px; }
+.visual .scroll-down .chevron { animation: move 3s ease-out infinite; position: absolute; width: 28px; height: 8px; opacity: 0; transform: scale3d(0.5, 0.5, 0.5); }
+.visual .scroll-down .chevron:first-child { animation: move 3s ease-out 1s infinite; }
+.visual .scroll-down .chevron:nth-child(2) { animation: move 3s ease-out 2s infinite; }
+@keyframes move { 25%{opacity: 1;} 33%{opacity: 1; transform: translateY(30px);} 67%{opacity: 1; transform: translateY(40px);} 100%{opacity: 0; transform: translateY(55px) scale3d(0.5, 0.5, 0.5);} }
+.visual .scroll-down .chevron::before,
+.visual .scroll-down .chevron::after { content: ''; position: absolute; top: 0; width: 51%; height: 100%; background-color: var(--color-white); }
+.visual .scroll-down .chevron::before { left: 0; transform: skew(0deg, 30deg); }
+.visual .scroll-down .chevron::after { right: 0; width: 50%; transform: skew(0deg, -30deg); }
+.visual .scroll-down .scroll-text { display: block; margin-top: 75px; margin-left: -30px; font-size: var(--font-size-micro); color: var(--color-white); text-transform: uppercase; white-space: nowrap; opacity: .25; animation: pulse 2s linear alternate infinite; }
+@keyframes pulse { to{opacity: 1;} }
+/* svgPart */
+.svgPart { height: 300vh; max-height: 3240px; background: linear-gradient(to top, var(--color-background) 80%, #29CCCA); }
