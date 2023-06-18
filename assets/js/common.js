@@ -100,3 +100,18 @@ $("#soundBtn").click(function() {
     }
   });
 });
+
+// Permission Audio 수락 묻기
+var AudioContext;
+var audioContext;
+window.onload = function() {
+  // 사용자로부터 마이크 액세스 권한을 요청 / 사용자가 마이크 액세스 권한을 부여하면, then() 메서드 실행
+  navigator.mediaDevices.getUserMedia({ audio: true }).then(() => { 
+    // 브라우저에서 지원하는 AudioContext 객체의 버전을 확인 / 일부브라우저는 Context 대신 webkitAudioContext를 쓰기때문에 같이 사용 / 확인결과를 audioContext변수에 할당
+    AudioContext = window.AudioContext || window.webkitAudioContext;
+    // AudioContext 객체를 생성 / 음성 입력과 처리를 위한 API를 제공
+    audioContext = new AudioContext();
+  }).catch(e => {
+    console.error(`Audio permissions denied: ${e}`);
+  });
+}
