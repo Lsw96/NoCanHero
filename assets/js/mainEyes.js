@@ -1,9 +1,9 @@
 const cursor = document.querySelector(".cursor");
 const cursorRect = cursor.getBoundingClientRect();
 document.querySelector(".eye-wrap").addEventListener("mousemove", (e) => {
-    console.log("===============================")
-    console.log("cursor = " + cursor)
-    console.log("cursorRect = " + cursorRect)
+    // console.log("===============================")
+    // console.log("cursor = " + cursor)
+    // console.log("cursorRect = " + cursorRect)
     // 커서
     gsap.to(cursor, {
         duration: .5,
