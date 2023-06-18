@@ -76,7 +76,7 @@ $(function(){
   $("html, body").animate({ scrollTop: 0 }, "slow"); 
 });
 
-//로고 누를 시 페이지 최상단 이동
+//로고 누를 시 페이지 최상단으로 이동
 document.getElementById('logo').addEventListener('click', function() {
   window.scrollTo({
     top: 0,
@@ -99,24 +99,3 @@ $("#soundBtn").click(function() {
     }
   });
 });
-
-// svgPart
-const svgWrap = document.querySelector('.svg-img-wrap');
-const path1 = document.querySelector('.svg-style');
-const path1Length = path1.getTotalLength(); //사용자 단위의 전체 경로 길이에 대해 사용자 에이전트의 계산된 값을 반환
-
-path1.style.strokeDasharray = path1Length;
-path1.style.strokeDashoffset = calcDashoffset(window.innerHeight * 0.8, svgWrap, path1Length);
-
-function calcDashoffset(scrollY, element, length) {
-  const ratio = (scrollY - element.offsetTop) / element.offsetHeight;
-  const value = length - (length * ratio);
-  return value < 0 ? 0 : value > length ? length : value;
-};
-
-function scrollHandler() {
-  const scrollY = window.scrollY + window.innerHeight;
-  path1.style.strokeDashoffset = calcDashoffset(scrollY, svgWrap, path1Length);
-}
-
-window.addEventListener('scroll', scrollHandler);

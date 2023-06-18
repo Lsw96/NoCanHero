@@ -95,7 +95,9 @@ header button img { display: block; width: 38px; height: 32px; margin-left: auto
 .svgPart { height: 300vh; max-height: 3240px; box-sizing: border-box; position: relative; }
 .svgPart .svg-img-wrap { position: relative; z-index: 1; width: 100%; height: 100%; overflow: hidden; }
 .svgPart .svg-img-wrap svg { fill: none; width: 110%; height: 100%; transform: translateX(-6.5%); }
-.svgPart .svg-img-wrap svg path { stroke: #fff; stroke-width: 3; stroke-opacity: .2; stroke-linecap: round; }
+.svgPart .svg-img-wrap svg path { stroke: #fff; stroke-width: 3; stroke-opacity: .2; stroke-linecap: round; transition: ease-out 1s; }
+.svgPart .svg-img-wrap svg rect,
+.svgPart .svg-img-wrap svg .rects, .svgPart .svg-img-wrap svg .rectas { transition: .25s; opacity: 0; }
 .svgPart .bgImg { width: 100%; height: 600px; background: linear-gradient(to top, rgba(33, 33, 33, 0), #29CCCA); position: absolute; top: 0; z-index: 2; }
 .svgPart > img { width: 75%; position: absolute; left: -30%; bottom: -45%; filter: contrast(100%) brightness(25%); }
 /* JS ==================================== */
