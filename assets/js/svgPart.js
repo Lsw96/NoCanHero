@@ -37,48 +37,6 @@ function scrollHandler () {
 window.addEventListener('scroll', scrollHandler);
 
 
-// 1F OVERVIEW 그래프 이미지
-function graphImg(){
-    const pjBox = document.querySelector('.pj-content');
-    let graph1 = document.querySelector('.graph1');
-    let graph2 = document.querySelector('.graph2');
-    const graphPosition = pjBox.getBoundingClientRect().top;
-    if( graphPosition < -181){
-        graph1.style.opacity = '0';
-        graph1.style.top = '50px';
-        graph2.style.opacity = '0';
-        graph2.style.top = '50px';
-    } else if (graphPosition <= 554) {
-        graph1.style.opacity = '1';
-        graph1.style.top = '0';
-        graph2.style.opacity = '1';
-        graph2.style.top = '0';
-    } else {
-        graph1.style.opacity = '0';
-        graph1.style.top = '50px';
-        graph2.style.opacity = '0';
-        graph2.style.top = '50px';
-    }
-};
-// function showCircle(index_number){
-//     let numbers = parseInt(index_number);
-//     const userBox = document.querySelector('.box');
-//     let user = document.querySelectorAll('.pj-user-box')[numbers];
-//     const userPosition = userBox.getBoundingClientRect().top;
-
-//     if (userPosition < -157) {
-//         user.style.opacity = "0";
-//         user.style.top = "50px";
-//     }else if (userPosition <= 658) {
-//         user.style.opacity = "1";
-//         user.style.top = "0";
-//     }  
-//     else {
-//         user.style.opacity = "0";
-//         user.style.top = "50px";
-//     }
-// };
-
 // svg Circle FadeIn and Out
 function showCircle(){
     const circle01 = document.querySelector('svg rect');

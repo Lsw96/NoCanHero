@@ -24,7 +24,7 @@ function mousePoint(){
     // console.log(mouseBoxPosition);
     const mouses = document.querySelector('.eyeEndding .eye-moves');
 
-    if ( mouseBoxPosition < -3378 ) {
+    if ( mouseBoxPosition < -2550 ) {
         mouses.style.opacity = '0';
     }
     else {

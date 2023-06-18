@@ -180,7 +180,7 @@ header button img { display: block; width: 38px; height: 32px; margin-left: auto
 .whitePart img:nth-of-type(6) { width: 25%; top: 55%; left: 5%; transform: rotate(-90deg); }
 
 /* eyeEndding */
-.eyeEndding { position: relative; margin-top: -35%; height: 300vh; max-height: 3240px; background-color: var(--color-background); }
+.eyeEndding { position: relative; margin-top: -35%; height: 200vh; max-height: 2160px; background-color: var(--color-background); }
 .eyeEndding .eye-moves { transition: all .25s; width: 5%; position: sticky; z-index: 2; top: 50%; left: 50%; transform: translateX(-50%); }
 .eyeEndding img:nth-of-type(2), .eyeEndding img:nth-of-type(3) { width: 100%; position: absolute; left: 0; transition: all 1s; }
 .eyeEndding img:nth-of-type(2) { z-index: 1; top: -10%; }

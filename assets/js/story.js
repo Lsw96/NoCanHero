@@ -116,20 +116,20 @@ var audioToggles = true;
 function showEndding(){
     let enddingBox = document.querySelector('.endding-story');
     const enddingBoxPosition = enddingBox.getBoundingClientRect().top;
-    // console.log(enddingBoxPosition);
+    console.log(enddingBoxPosition);
     const edImg01 = document.querySelector('.endding-story > img:nth-of-type(4)');
     const edImg02 = document.querySelector('.endding-story > img:nth-of-type(3)');
 
     var audio02 = document.querySelector('.endding-story > audio');
     var audio03 = document.querySelector('.endding-story audio:nth-of-type(2)');
     audio02.volume = 0.5;
-    audio03.volume = 0.2;
-    if ( enddingBoxPosition < -5800 && audioToggles == false ) {
+    audio03.volume = 0.1;
+    if ( enddingBoxPosition < -5000 && audioToggles == false ) {
         audio03.pause();
         audio03.currentTime = 0;
         audioToggles = false;
     }
-    else if ( enddingBoxPosition < -935 && audioToggles == true ) {
+    else if ( enddingBoxPosition < -1835 && audioToggles == true ) {
         audio03.muted = true;
         audio03.play();
         audio03.muted = false;
