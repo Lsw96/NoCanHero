@@ -88,6 +88,7 @@ function showCircle(){
     const textSub02 = document.querySelector('.svgPart p:nth-of-type(4)');
     let circle = document.querySelector('.svgPart');
     const circlePosition = circle.getBoundingClientRect().top;
+    // console.log(circlePosition);
 
     if ( circlePosition < -1788 ) {
         circle01.style.opacity = "0";
@@ -96,7 +97,7 @@ function showCircle(){
         textSub01.style.opacity = "0";
         textSub02.style.opacity = "0";
     }
-    else if ( circlePosition <= -1209 ) {
+    else if ( circlePosition <= -1023 ) {
         textSub02.style.opacity = "1";
     }
     else if ( circlePosition <= -764 ) {
@@ -121,15 +122,15 @@ function showText(){
     const text01 = document.querySelector('.svgPart p:first-of-type');
     const text02 = document.querySelector('.svgPart p:nth-of-type(2)');
     const text03 = document.querySelector('.svgPart p:nth-of-type(5)');
-    var audio01 = new Audio('./assets/audio/doorOpenSounds.mp3');
+    var audio01 = document.querySelector('.svgPart audio');
     audio01.volume = 0.2;
 
     let text = document.querySelector('.svgPart');
     const textPosition = text.getBoundingClientRect().top;
-    console.log(textPosition);
+    // console.log(textPosition);
     if ( textPosition < -2000 ) {
         text03.style.opacity = "0";
-    }    
+    }
     else if ( textPosition <= -1600 && audioReload == false) {
         audio01.pause();
         audio01.currentTime = 0;
@@ -145,7 +146,9 @@ function showText(){
         text02.style.opacity = "1";
     }
     else if ( textPosition <= 0 && audioReload == true) {
+        audio01.muted = true;
         audio01.play();
+        audio01.muted = false;
         audioReload = false;
     }
     else {
@@ -154,8 +157,6 @@ function showText(){
         text03.style.opacity = "0";
     }
 };
-
-
 
 window.onscroll = function (){
     showCircle();

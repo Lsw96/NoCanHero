@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 const cursor = document.querySelector(".cursor");
 const cursorRect = cursor.getBoundingClientRect();
 document.querySelector(".eye-wrap").addEventListener("mousemove", (e) => {
