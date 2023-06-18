@@ -95,6 +95,7 @@ $("#soundBtn").click(function() {
     }
     else {
       audio.play();
+      audio.volume = 1;
       return attr.replace("02", "01");
     }
   });
