@@ -1,0 +1,13 @@
+/* common */
+* { margin: 0; padding: 0; box-sizing: border-box; } 
+body { overflow-x: hidden; width: 100vw; } 
+ul, li { list-style-type: none; } 
+a { text-decoration: none; } 
+
+article { overflow: hidden; margin: auto; max-width: 640px; height: 100%; }
+article ul { display: flex; transition: all .5s; }
+article ul li img { display: block; width: 640px; height: 400px; }
+
+.circle { display: flex; justify-content: center; gap: 14px; margin: 1em 0; }
+.circle span { cursor: pointer; width: 18px; height: 18px; background-color: gold; border: 1px solid #212121; border-radius: 25px; }
+.circle span:hover { background-color: goldenrod; }
