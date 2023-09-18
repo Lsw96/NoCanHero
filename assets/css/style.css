@@ -1,5 +1,0 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-.like-box { display: flex; align-items: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
-.btn-like { font-size: 12px; padding: 5px 20px; font-family: sans-serif; }
-.icon-like { margin-left: 20px; color: #ccc; font-size: 25px; transition: all .5s ease; }
-.icon-like.active { color: orangered; }
