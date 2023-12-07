@@ -22,16 +22,16 @@ sphere(canvasFloat, skills, counts, options);
 function sphere(canvas, skills, counts, options) {
     const pi = Math.PI; 
     const {
-        width = 700,
-        height = 700,
-        radius = 150,
-        fontSize = 22,
+        width = 800,
+        height = 800,
+        radius = 300,
+        fontSize = 18,
         tilt = 0,
         initialVelocityX = 0,
         initialVelocityY = 0,
         initialRotationX = 0,
         initialRotationZ = 0,
-        colorMode = 'white'
+        colorMode = 'black'
     } = options;
   
     let vx = initialVelocityX, vy = initialVelocityY;
@@ -42,7 +42,7 @@ function sphere(canvas, skills, counts, options) {
     ctx.textAlign = 'center';
     
     // Hi-DPI support
-    canvas.width = width * 2;
+    canvas.width = width * 2.5;
     canvas.height = height * 2;
     canvas.style.width = `${width}px`;
     canvas.style.height = `${height}px`;
@@ -99,7 +99,7 @@ function sphere(canvas, skills, counts, options) {
             // convert to cartesian and then draw.
             const alpha = 0.6 + 0.4 * (x/radius);
             const size = fontSize + 2 + 5*(x/radius);
-            if (colorMode === 'black') {
+            if (colorMode === 'white') {
                 ctx.fillStyle = `rgba(255,255,255,${alpha})`;
             } else {
                 ctx.fillStyle = `rgba(0,0,0,${alpha})`;

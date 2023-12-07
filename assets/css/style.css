@@ -9,7 +9,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
-  font-weight: 100;
+  font-weight: 400;
   line-height: 1.5;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -32,7 +32,7 @@ body.dark {
 aside {
   width: 180px;
   height: 100vh;
-  background: #000;
+  background: #111112;
   position: fixed;
   top: 0;
   left: 0;
@@ -63,7 +63,7 @@ aside nav .logo-box h2 {
   font-size: 2.4rem;
   font-weight: 900;
   letter-spacing: -1px;
-  color: #fff;
+  color: #f2f2f2;
   animation: rotation-back linear infinite 3s;
 }
 aside nav .logo-box h2 a {
@@ -71,7 +71,7 @@ aside nav .logo-box h2 a {
   color: inherit;
 }
 aside nav .logo-box .logo-sphere {
-  background: #fff;
+  background: #f2f2f2;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -91,14 +91,14 @@ aside nav ul li {
 aside nav ul li a {
   text-decoration: none;
   font-size: 1.6rem;
-  color: #fff;
+  color: #f2f2f2;
 }
-aside nav ul li a:hoer {
+aside nav ul li a:hover {
   transition: color 0.15s;
-  color: #ccc;
+  color: #ced4da;
 }
 aside .dark-mode {
-  border: 3px solid #aaa;
+  border: 3px solid #adb5bd;
   width: calc(100% - 84px);
   height: 20px;
   border-radius: 2px;
@@ -107,10 +107,10 @@ aside .dark-mode {
 aside .dark-mode .switch {
   width: 18px;
   height: 18px;
-  background: #aaa;
+  background: #f1f3f5;
   border-radius: 50%;
   position: absolute;
-  top: 1.5px;
+  top: 0.8px;
   left: 4px;
   cursor: pointer;
   transition: all 0.15s;
@@ -172,8 +172,9 @@ section article {
 section article .main-title {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 9.6rem 0;
+  justify-content: center;
+  height: 100%;
+  margin-bottom: 2em;
 }
 section article .main-title h1 {
   position: relative;
@@ -181,14 +182,16 @@ section article .main-title h1 {
   font-size: 9.2rem;
   font-weight: 400;
   left: -7px;
+  line-height: 1;
+  word-spacing: 0;
 }
 section article .main-title h1::after {
   position: absolute;
-  top: -40px;
+  top: -2px;
   left: 7px;
   content: "";
-  width: 60px;
-  height: 12px;
+  width: 18px;
+  height: 6px;
   background: #ccc;
 }
 section article .main-title h1 span {
@@ -196,41 +199,51 @@ section article .main-title h1 span {
   font-weight: 900;
   margin-left: 2px;
 }
-section article .main-title h4 {
-  margin-bottom: 2em;
+section article .main-title .text-container {
+  height: 58px;
+}
+section article .main-title .text-container h4.text-animated {
+  margin-top: 24px;
+  margin-bottom: 0;
   font-size: 1.8rem;
   font-weight: 400;
-  color: #FF9945;
+  color: #d76100;
+  word-spacing: 1.25px;
+  white-space: nowrap;
 }
-section article .main-title button {
-  outline: none;
-  border: none;
-  width: 248px;
-  height: 48px;
-  font-size: 1.6rem;
-  font-weight: 100;
-  color: #fff;
-  background: #707070;
-  border-radius: 2px;
-  transition: all 0.6s ease;
-  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.2);
+section article .main-title a {
+  width: 128px;
+}
+section article .main-title a button.comet {
   cursor: pointer;
+  width: 128px;
+  height: 28px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  background: #efefef;
+  color: #888;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  transition: all 0.25s ease;
 }
-section article .main-title button:hover {
+section article .main-title a button.comet:hover {
   color: #000;
-  background: #eee;
-  box-shadow: inset -2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: inset -2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 section article .main-title ul.link-box {
+  position: absolute;
+  bottom: 22px;
   display: flex;
-  margin-top: 6em;
   padding: 0;
 }
 section article .main-title ul.link-box li {
   list-style: none;
-  font-size: 1.8rem;
+  font-size: 1.25rem;
   font-weight: 400;
+  color: #ccc;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 section article .main-title ul.link-box li:not(:nth-child(3))::after {
   content: "|";
@@ -247,7 +260,6 @@ section article .main-title ul.link-box li a:hover {
 }
 section article .main-title #canvas-float {
   position: relative;
-  right: 100px;
 }
 section article.about.text {
   align-items: flex-start;
@@ -422,7 +434,6 @@ article.project .content-text {
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
-  margin-top: 2em;
   text-align: right;
 }
 article.project .content-text h2 {
@@ -430,6 +441,7 @@ article.project .content-text h2 {
   width: 100%;
   font-size: 3.6rem;
   font-weight: 400;
+  margin-top: 4px;
   margin-bottom: 0.25em;
 }
 article.project .content-text h2::after {
