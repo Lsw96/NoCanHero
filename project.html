@@ -1,59 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="image" property="og:image" content="./assets/img/Sharing.png">
-    <meta name="description" content="Seongwoo Lee Portfolio">
-    <meta name="title" property="og:title" content="Seongwoo Lee">
-    <meta name="description" property="og:description" content="Seongwoo's Portfolio">
-    <meta property="og:type" content="website">
-    <meta name="author" content="Seongwoo Lee">
-    <title>Seongwoo Lee, Developer</title>
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo.png" />
-    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="image" property="og:image" content="./assets/img/Sharing.png">
+  <meta name="description" content="Seongwoo Lee Portfolio">
+  <meta name="title" property="og:title" content="Seongwoo Lee">
+  <meta name="description" property="og:description" content="Seongwoo's Portfolio">
+  <meta property="og:type" content="website">
+  <meta name="author" content="Seongwoo Lee">
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo.png" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <title>Seongwoo Lee, Developer</title>
+  <script src="https://kit.fontawesome.com/8b13b2ca0a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+  <div class="load s-d">
+    <img src="./assets/img/logo-white.png" alt="logo image">
+  </div>
+  
+  <aside>
+    <nav>
+      <div class="logo-wrap">
+        <div class="logo-box">
+          <h2><a href="/">LSW</a></h2>
+          <div class="logo-sphere"></div>
+        </div>
+      </div>
+      <ul>
+        <li><a href="about.html" title="About 페이지 이동">ABOUT</a></li>
+        <li><a href="project.html" title="Project 페이지 이동">PROJECT</a></li>
+        <li><a href="connect.html" title="Connect 페이지 이동">CONNECT</a></li>
+      </ul>
+      <div class="dark-mode">
+        <span class="switch"></span>
+      </div>
+    </nav>
+  </aside>
+  
+  <section>
+    <article class="project active">
+      <div class="content-box">
+        <h2 class="content-title">TRAUMA</h2>
+        <div class="content-text-box s-auto">
+          <p class="content-text-title">
+            Javascript 입문 및 기초를 위한 교내 자유 콘텐츠 프로젝트로 진행
+          </p>
+          <div class="view-btn">
+            <a href="https://lsw96.github.io/Trauma/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"></path>
+                <path fill-rule="evenodd"
+                  d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              View Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
 
-    <aside>
-        <nav>
-            <div class="logo-box">
-                <h2><a href="/">LSW</a></h2>
-                <div class="logo-sphere"></div>
-            </div>
-            <ul>
-                <li><a href="about.html" title="About 페이지 이동">ABOUT</a></li>
-                <li><a href="project.html" title="Project 페이지 이동">PROJECT</a></li>
-                <li><a href="connect.html" title="Connect 페이지 이동">CONNECT</a></li>
-            </ul>
-            <div class="dark-mode">
-                <span class="switch"></span>
-            </div>
-        </nav>
-        <address>
-            &copy;2023 LeeSeongwoo.All Rights Reserved.
-            <span>&copy;2023 LeeSeongwoo.All Rights Reserved.</span>
-        </address>
-    </aside>
-
-    <section>
-        <article class="project">
-            <div class="content-img">
-                <div class="item">프로젝트<br>이미지</div>
-                <div class="itema">프로젝트<br>이미지</div>
-            </div>
-            <div class="content-text">
-                <h2>1 trauma</h2>
-                <span><a href="">Lorem ipsum, dolor sit amet</a></span>
-                <div class="items">콘텐츠 소개</div>
-                <div class="items">사용한 기술</div>
-                <div class="items">코드 리뷰</div>
-            </div>
-        </article>
-    </section>
-    
-    <script src="./assets/js/common.js" type="text/javascript"></script>
+  <div class="scroll-down-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd"
+        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-.53 14.03a.75.75 0 001.06 0l3-3a.75.75 0 10-1.06-1.06l-1.72 1.72V8.25a.75.75 0 00-1.5 0v5.69l-1.72-1.72a.75.75 0 00-1.06 1.06l3 3z"
+        clip-rule="evenodd">
+      </path>
+    </svg>
+  </div>
+  
+  <script type="text/javascript" src="./assets/js/jquery-3.7.1.min.js"></script>
+  <script type="text/javascript" src="./assets/js/common.js"></script>
 </body>
+
 </html>

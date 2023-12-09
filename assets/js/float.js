@@ -5,7 +5,7 @@ const skills = [
     'MySQL', 'Web API', 'MongoDB', 'React', 'React Native',
     'NodeJS', 'SCSS', 'Redux', 'Github', 'Adobe After Effects',
     'Unity', 'Adobe Photoshop', 'Adobe Illustrator',
-    'Adobe Premiere Pro',
+    'Adobe Premiere Pro'
 ];
 const counts = [1,2,4,5,4,2,1];
 
@@ -17,8 +17,18 @@ const options = {
   initialRotationZ: 0.01
 };
 
-sphere(canvasFloat, skills, counts, options);
- 
+let colorMode = 'black'; // 초기 색상 모드
+
+sphere(canvasFloat, skills, counts, { ...options, colorMode });
+
+// Dark Mode
+$('.switch').on('click', () => {
+
+  colorMode = colorMode === 'black' ? 'white' : 'black';
+  sphere(canvasFloat, skills, counts, { ...options, colorMode });
+  
+});
+
 function sphere(canvas, skills, counts, options) {
     const pi = Math.PI; 
     const {
@@ -104,7 +114,7 @@ function sphere(canvas, skills, counts, options) {
             } else {
                 ctx.fillStyle = `rgba(0,0,0,${alpha})`;
             }
-            ctx.font = `${size}px sans-serif`;
+            ctx.font = `${size}px Pretendard`;
             ctx.fillText(skill, y + width/2, -z + height/2);
 
             ix--;
