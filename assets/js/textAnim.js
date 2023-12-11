@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
 
   const textElement = document.querySelector('.text-animated');
@@ -51,3 +52,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
   animateText();
 });
+
+const FPS = 10;
+const DURATION = 300;
+const CHARACTERS = 'ABCDEFGHI';
+const TEXT = 'DEVELOPER';
+const DELAY = ~~(300 / FPS);
+const FRAME_COUNT = ~~(DURATION / 300) * FPS
+const $Element = document.querySelector('.main-texts');
+let frameIndex = 0;
+let timeoutId = undefined;
+
+function resetText() {
+  if (timeoutId !== undefined) clearTimeout(timeoutId);
+  frameIndex = 0;
+  $Element.innerText = TEXT;
+}
+
+function setRandomText() {
+  const text = Array.from({ length: TEXT.length }).map(() => CHARACTERS[~~(Math.random() * CHARACTERS.length)]);
+  $Element.innerText = text.join('');
+}
+
+function animate() {
+  if (frameIndex >= FRAME_COUNT) {
+    resetText();
+  } else {
+    frameIndex += 1;
+    setRandomText();
+    timeoutId = setTimeout(animate, DELAY);
+  }
+}
+
+$Element.addEventListener('mouseenter', animate);
+$Element.addEventListener('mouseout', resetText);
+
+resetText();

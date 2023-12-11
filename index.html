@@ -12,15 +12,14 @@
   <meta property="og:type" content="website">
   <meta name="author" content="Seongwoo Lee">
   <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo.png" />
-  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
   <title>Seongwoo Lee, Developer</title>
 </head>
 
 <body>
-  <div class="load">
+  <!-- <div class="load">
     <img src="./assets/img/logo-white.png" alt="logo image">
-  </div>
+  </div> -->
   <aside>
     <nav>
       <div class="logo-wrap">
@@ -44,14 +43,14 @@
 
     <article>
       <div class="main-title">
-        <h1>
-          <span>DEVELOPER</span>
+        <h1 class="main-texts">
+          DEVELOPER
         </h1>
         <div class="text-container">
           <h4 class="text-animated"></h4>
         </div>
-        <a href="/assets/img/LeeSeongwoo_resume.pdf" download>
-          <button type="button" class="comet">Résumé</button>
+        <a href="/assets/img/LeeSeongwoo_resume.pdf" onclick="return confirmDownload();">
+          <button type="button" class="comet">Résumé !</button>
         </a>
         <ul class="link-box">
           <li><a target="_blank" href="https://www.instagram.com/seongwoo_1112/">Instagram</a></li>
@@ -66,8 +65,8 @@
 
   <script type="text/javascript" src="./assets/js/jquery-3.7.1.min.js"></script>
   <script type="text/javascript" src="./assets/js/common.js"></script>
-  <script type="text/javascript" src="./assets/js/float.js"></script> <!-- 메인 텍스트 배열 회전-->
-  <script type="text/javascript" src="./assets/js/textAnim.js"></script> <!-- 메인 텍스트 변화 -->
+  <script type="text/javascript" src="./assets/js/float.js"></script>
+  <script type="text/javascript" src="./assets/js/textAnim.js"></script>
 </body>
 
 </html>
