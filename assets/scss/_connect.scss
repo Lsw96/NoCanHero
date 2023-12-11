@@ -1,0 +1,80 @@
+section {
+  @include section-size;
+
+  article.connect-box {
+    .connect {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      margin-top: 64px;
+      mix-blend-mode: difference;
+
+      h2 {
+        font-size: 5.6rem;
+        font-family: 'Geomanist-bold';
+        margin: 0;
+        color: #fff;
+      }
+
+      p {
+        position: relative;
+        cursor: pointer;
+        margin: 0;
+        font-size: 1.8rem;
+        font-family: 'Geomanist-medium';
+        color: #444;
+        word-break: break-all;
+        white-space: nowrap;
+
+        &:hover {
+          color: $color-gray-6;
+        }
+      }
+
+      .sns-icon-box {
+        margin-top: 2.5em;
+
+        a {
+          font-size: 3.2rem;
+          padding: 0.5em;
+          color: #444;
+          transition: color .25s;
+
+          &:hover {
+            color: #aaa;
+          }
+        }
+      }
+    }
+  }
+}
+
+span.copy-message {
+  position: absolute;
+  top: -28px;
+  right: -24px;
+  width: 44px;
+  padding: 6px 14px;
+  font-size: 1.2rem;
+  background: $color-gray-9;
+  color: $color-gray-6;
+  border-radius: 4px;
+}
+
+.glow {
+  animation: glow 2s linear infinite alternate-reverse;
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    text-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
+  }
+
+  50% {
+    text-shadow: 0 0 14px rgba(255, 255, 255, 0.8);
+  }
+}

@@ -7,10 +7,6 @@ $('.switch').on('click', () => {
   $('.about-text').toggleClass('black');
 });
 
-function confirmDownload() {
-  return confirm("다운로드하시겠습니까?");
-}
-
 // About.html - Skill Menu Change
 $('.about-text ul li').each(function () {
 

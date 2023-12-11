@@ -13,15 +13,16 @@
   <meta name="author" content="Seongwoo Lee">
   <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo.png" />
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-  <title>Seongwoo Lee, Developer</title>
+  <script type="text/javascript" src="./assets/js/jquery-3.7.1.min.js"></script>
   <script src="https://kit.fontawesome.com/8b13b2ca0a.js" crossorigin="anonymous"></script>
+  <title>Seongwoo Lee, Developer</title>
 </head>
 
 <body class="dark">
 
-  <div class="load s-d">
+  <!-- <div class="load s-d">
     <img src="./assets/img/logo-white.png" alt="logo image">
-  </div>
+  </div> -->
 
   <aside>
     <nav>
@@ -46,10 +47,10 @@
     <article class="connect-box">
       <div class="connect">
         <h2 class="glow">CONNECT</h2>
-        <p>
+        <p class="copy-text" data-text="tjddn1007@naver.com">
           <i class="fa-solid fa-envelope"></i> tjddn1007@naver.com
         </p>
-        <p>
+        <p class="copy-text1" data-text="010-2616-1752">
           <i class="fa-solid fa-phone"></i> +82 010-2616-1752
         </p>
         <div class="sns-icon-box">
@@ -71,9 +72,45 @@
     </article>
   </section>
 
-  <script type="text/javascript" src="./assets/js/jquery-3.7.1.min.js"></script>
   <script type="text/javascript" src="./assets/js/common.js"></script>
   <script type="text/javascript" src="./assets/js/cloud.js"></script>
+  <script>
+    // 이메일, 전화번호 복사하기
+    function copyToClipboard(text, x, y) {
+
+      const el = document.createElement('span');
+      el.className = 'copy-message';
+      el.textContent = 'Copied!';
+      el.style.left = x + 'px';
+      el.style.top = y + 'px';
+
+      document.body.appendChild(el);
+
+      // 0.8초 후 span 제거
+      setTimeout(() => {
+        document.body.removeChild(el);
+      }, 800);
+
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy'); // 'copy': 브라우저가 제공하는 편집 기능 중 하나. 텍스트를 클립보드로 복사하는 역할
+      document.body.removeChild(textarea);
+    }
+
+    // 이벤트 함수 등록
+    function handleCopyClick(event) {
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+      const buttonText = event.target.getAttribute('data-text');
+
+      copyToClipboard(buttonText, mouseX, mouseY);
+    }
+
+    document.querySelector('.copy-text').addEventListener('click', handleCopyClick);
+    document.querySelector('.copy-text1').addEventListener('click', handleCopyClick);
+  </script>
 
 </body>
 
