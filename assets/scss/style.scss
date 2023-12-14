@@ -1,3 +1,24 @@
+// 767px 이하
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+// 768px 이상, 1023px 이하일때
+@mixin tablet {
+  @media (min-width: $mobile) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+// 1024px 이상일때
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
 @mixin section-size {
   width: calc(100vw - 124px); // aside 크기 제외 함
   height: 100vh;
@@ -11,6 +32,14 @@
   width: calc(100% - 110px); // 콘텐츠 좌우 여백
   height: 100%;
   padding-left: 55px;
+}
+
+@mixin pos($p: absolute, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $p;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
 
 @import 'reset', 'variables', 'header', 'cloud',
@@ -49,8 +78,7 @@ section {
       margin-bottom: 2em;
 
       h1.main-title {
-        position: relative;
-        left: -7px;
+        @include pos($p: relative, $left: -7px);
         margin-left: 2px;
         margin-bottom: 0;
         width: 650px;
@@ -61,10 +89,8 @@ section {
         word-spacing: 0;
 
         &::after {
-          position: absolute;
-          top: -2px;
-          left: 7px;
           content: '';
+          @include pos($p: absolute, $top: -2px, $left: 7px);
           width: 8px;
           height: 8px;
           background: $color-orange-400;
@@ -115,8 +141,7 @@ section {
       }
 
       ul.link-box {
-        position: absolute;
-        bottom: 22px;
+        @include pos($p:absolute, $bottom: 22px);
         display: flex;
         padding: 0;
 
@@ -158,10 +183,8 @@ section {
 
 // loading anim
 .load {
-  position: absolute;
+  @include pos($p: absolute, $top: 0, $left: 0);
   z-index: 9999;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,60 +204,6 @@ section {
     opacity: 1;
     transform: scale(1);
     animation: load .5s linear forwards;
-  }
-}
-
-// about, project에서 사용 중 / 추후 이동 예정 /
-.scroll-down-btn {
-  position: fixed;
-  left: 0;
-  bottom: 3vh;
-  right: 0;
-  opacity: 0;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 124px;
-  transition: .1s ease;
-  animation: fadeIn 1s 2.1s forwards, bounce 1s 1s infinite;
-
-  &.mix {
-    color: #fff;
-    mix-blend-mode: difference;
-  }
-
-  &.mix-x {
-    color: #000;
-  }
-
-  svg {
-    width: 38px;
-    height: 38px;
-  }
-}
-
-// .scroll-down-btn anim
-@keyframes bounce {
-
-  0%,
-  100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(.8, 0, 1, 1);
-  }
-
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0, 0, .2, 1);
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
 

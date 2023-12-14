@@ -59,7 +59,7 @@ const CHARACTERS = 'ABCDEFGHI';
 const TEXT = 'DEVELOPER';
 const DELAY = ~~(300 / FPS);
 const FRAME_COUNT = ~~(DURATION / 300) * FPS
-const $Element = document.querySelector('.main-texts');
+const $Element = document.querySelector('.main-title');
 let frameIndex = 0;
 let timeoutId = undefined;
 

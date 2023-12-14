@@ -21,6 +21,15 @@
   src: url(../fonts/Ydestreet-Bold.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'NotoSerifKR-medium';
+  src: url(../fonts/NotoSerifKR-Medium.otf) format('opentype');
+}
+@font-face {
+  font-family: 'NotoSerifKR-light';
+  src: url(../fonts/NotoSerifKR-Light.otf) format('opentype');
+}
+
 html,
 body {
   -ms-overflow-style: none;

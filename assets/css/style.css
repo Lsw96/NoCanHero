@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 @font-face {
   font-family: "Geomanist-bold";
@@ -15,6 +16,14 @@
   font-family: "Ydestreet-bold";
   font-weight: 900;
   src: url(../fonts/Ydestreet-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NotoSerifKR-medium";
+  src: url(../fonts/NotoSerifKR-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: "NotoSerifKR-light";
+  src: url(../fonts/NotoSerifKR-Light.otf) format("opentype");
 }
 html,
 body {
@@ -50,6 +59,7 @@ button {
   border: none;
 }
 
+/*반응형 화면 크기*/
 aside {
   width: 124px;
   height: 100vh;
@@ -388,105 +398,233 @@ section.about-content {
 section.about-content.white {
   background: #000;
 }
-section.about-content article.about.text {
+section.about-content article.about-wrap {
+  position: relative;
+  opacity: 0;
+  transform: translateY(50%);
+  transition: opacity 1s ease-in-out, transform 1s;
   align-items: flex-start;
-  padding-top: 10em;
   height: calc(100% - 20em);
+  padding-top: 30em;
 }
-section.about-content article.about .about-title-right {
-  text-align: right;
+section.about-content article.about-wrap.active {
+  opacity: 1;
+  transform: translateY(0);
 }
-section.about-content article.about .about-text {
+section.about-content article.about-wrap.p-t {
+  padding-top: 14em;
+}
+section.about-content article.about-wrap .about-text {
   width: 100%;
-  background: #eee;
-  margin: 2em;
-  padding: 2em 8em;
+  padding: 2em 10em;
   color: #000;
 }
-section.about-content article.about .about-text.black {
-  background: #444;
+section.about-content article.about-wrap .about-text.black {
+  background: #000;
   color: #fff;
 }
-section.about-content article.about .about-text.left {
-  height: 50%;
+section.about-content article.about-wrap .about-text h4 {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 400;
+  color: inherit;
 }
-section.about-content article.about .about-text.center {
-  height: 70%;
+section.about-content article.about-wrap .about-text h4.point {
+  font-weight: 400;
+  font-family: "NotoSerifKR-medium";
 }
-section.about-content article.about .about-text.right {
-  height: 90%;
+section.about-content article.about-wrap .about-text h4::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 0.1px;
+  background: #000;
 }
-section.about-content article.about .about-text ul {
+section.about-content article.about-wrap .about-text h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -1px;
+  width: 12px;
+  height: 0.1px;
+  transform: rotate(45deg);
+  background: #000;
+}
+section.about-content article.about-wrap .about-text span {
+  font-size: 2.4rem;
+  font-family: "NotoSerifKR-medium";
+}
+section.about-content article.about-wrap .about-text p {
+  margin: 0;
+  margin-top: 0.5em;
+  font-size: 2.4rem;
+  font-weight: 100;
+  color: inherit;
+}
+section.about-content article.about-wrap .about-text p.point {
+  font-weight: 400;
+  font-family: "NotoSerifKR-medium";
+}
+section.about-content article.about-wrap .about-text ul {
   padding: 0;
 }
-section.about-content article.about .about-text ul li {
-  font-size: 1.8rem;
+section.about-content article.about-wrap .about-text ul li {
+  font-size: 3rem;
   font-weight: 400;
   color: inherit;
   transition: all 0.35s;
   cursor: pointer;
 }
-section.about-content article.about .about-text ul li.actives {
-  font-size: 3.6rem;
+section.about-content article.about-wrap .about-text ul li.actives {
+  font-size: 3.8rem;
   font-weight: 900;
 }
-section.about-content article.about h3 {
-  position: relative;
-  font-size: 2.4rem;
-  font-weight: 400;
-  color: inherit;
+section.about-content article.about-wrap .about-text ul li:hover {
+  color: #868e96;
 }
-section.about-content article.about h3::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: #000;
-}
-section.about-content article.about h3::after {
-  content: "";
-  position: absolute;
-  bottom: 4px;
-  right: -1px;
-  width: 12px;
-  height: 1px;
-  transform: rotate(45deg);
-  background: #000;
-}
-section.about-content article.about p {
-  font-size: 1.6rem;
-  font-weight: 100;
-  color: inherit;
+section.about-content article.about-wrap .about-text p.text {
+  text-align: left;
+  padding-right: 8em;
 }
 
-.view-btn {
-  display: flex;
-  column-gap: 1rem;
+.scroll-down-btn {
+  position: fixed;
+  right: 0;
+  bottom: 3vh;
+  left: 0;
+  opacity: 0;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 124px;
+  transition: 0.1s ease;
+  animation: fadeIn 1s 2.1s forwards, bounce 1s 1s infinite;
 }
-.view-btn a {
-  overflow: hidden;
+.scroll-down-btn.mix {
+  color: #fff;
+  mix-blend-mode: difference;
+}
+.scroll-down-btn.mix-x {
+  color: #000;
+}
+.scroll-down-btn svg {
+  width: 38px;
+  height: 38px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body.ov-a {
+  background: #78AA7E;
+}
+
+.p-container {
+  overflow-x: hidden;
+  --hc-width: calc(100vw - 124px);
+  --hc-height: 100vh;
+  --num-section: 4;
+  width: var(--hc-width);
+  height: var(--hc-width);
+  margin-left: 124px;
+  transform-origin: top left;
+  transform: rotate(-90deg) translateX(calc(var(--hc-height) * -1));
+}
+.p-container::-webkit-scrollbar {
+  display: none;
+}
+.p-container .project {
+  display: flex;
+  width: calc(var(--hc-width) * var(--num-section));
+  transform-origin: top left;
+  transform: rotate(90deg) translateY(calc(var(--hc-height) * -1));
+  background: linear-gradient(to right, #78AA7E, #78aaa8, #89aa78);
+}
+.p-container .project .project-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100vw;
+  height: 100vh;
+  padding: 124px 124px;
+  font-size: 1.4rem;
+}
+.p-container .project .project-content .card {
   position: relative;
-  isolation: isolate;
+  width: 30vw;
+  height: 50vh;
+  margin-right: 5%;
+  background: rgb(38, 38, 38);
+  border-radius: 8px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  padding: 0.8rem 1.6rem;
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 1.5;
-  background: #f2f2f2;
-  border: 1px solid #fff;
-  border-radius: 4px;
-  vertical-align: middle;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: -8px 8px 16px rgba(0, 0, 0, 0.25);
 }
-.view-btn a svg {
-  width: 2rem;
-  height: 2rem;
-  margin-inline-end: 0.5rem;
+.p-container .project .project-content .card::before {
+  content: "2023";
+  position: absolute;
+  z-index: 3;
+  top: -12px;
+  left: -28px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.25em 1em;
+  border-radius: 4px;
+}
+.p-container .project .project-content .card.center {
+  align-self: center;
+}
+.p-container .project .project-content .card .card-img {
+  overflow: hidden;
+  flex: 2;
+  border-radius: 8px 8px 0 0;
+}
+.p-container .project .project-content .card .card-img img {
+  -webkit-transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.p-container .project .project-content .card .card-img img:hover {
+  transform: scale(1.1);
+}
+.p-container .project .project-content .card .card-text {
+  flex: 0.5;
+  font-size: 2.4rem;
+  color: #fff;
+  font-family: "Ydestreet-bold";
+  text-align: center;
+}
+.p-container .project .project-content .card .card-text .icon-box {
+  justify-content: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.p-container .project .project-content .card .card-text .icon-box li {
+  position: relative;
+  padding: 0 1em;
+}
+.p-container .project .project-content .card .card-text .icon-box li img {
+  width: 40px;
+  height: 40px;
 }
 
 section {
@@ -608,10 +746,10 @@ section article .main h1.main-title {
   word-spacing: 0;
 }
 section article .main h1.main-title::after {
+  content: "";
   position: absolute;
   top: -2px;
   left: 7px;
-  content: "";
   width: 8px;
   height: 8px;
   background: #FF5000;
@@ -676,9 +814,9 @@ section article .main #canvas-float {
 
 .load {
   position: absolute;
-  z-index: 9999;
   top: 0;
   left: 0;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -699,49 +837,6 @@ section article .main #canvas-float {
   animation: load 0.5s linear forwards;
 }
 
-.scroll-down-btn {
-  position: fixed;
-  left: 0;
-  bottom: 3vh;
-  right: 0;
-  opacity: 0;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 124px;
-  transition: 0.1s ease;
-  animation: fadeIn 1s 2.1s forwards, bounce 1s 1s infinite;
-}
-.scroll-down-btn.mix {
-  color: #fff;
-  mix-blend-mode: difference;
-}
-.scroll-down-btn.mix-x {
-  color: #000;
-}
-.scroll-down-btn svg {
-  width: 38px;
-  height: 38px;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes load {
   0% {
     transform: scale(1);

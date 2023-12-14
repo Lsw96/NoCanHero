@@ -7,32 +7,6 @@ $('.switch').on('click', () => {
   $('.about-text').toggleClass('black');
 });
 
-// About.html - Skill Menu Change
-$('.about-text ul li').each(function () {
-
-  $(this).on('click', function () {
-    $('.about-text ul li').removeClass('actives');
-    $(this).toggleClass('actives');
-  });
-});
-
-// Project.html - Image Change
-$(document).ready(function () {
-  const itemsContainer = $('content-img .items');
-
-  $('.items img').on('click', function () {
-    const mainImage = $('#mainImage');
-    const currentImageSrc = mainImage.attr('src');
-    const newImageSrc = $(this).attr('src');
-
-    mainImage.fadeOut('fast', function () {
-      mainImage.attr('src', newImageSrc).fadeIn('fast');
-    });
-
-    $(this).attr('src', currentImageSrc);
-  });
-});
-
 // 페이지 로드 후 실행되는 함수
 $(document).ready(function () {
   // 스크롤 이벤트 감지
@@ -51,31 +25,31 @@ $(document).ready(function () {
   });
 });
 
-// 페이지 로드 후 실행되는 함수
-$(document).ready(function () {
-  // 스크롤 이벤트 감지
-  $(window).scroll(function () {
-    // 각 프로젝트에 대해 실행할 함수 호출
-    $('.project').each(function () {
-      revealOnScroll($(this));
-    });
-  });
+// // 페이지 로드 후 실행되는 함수
+// $(document).ready(function () {
+//   // 스크롤 이벤트 감지
+//   $(window).scroll(function () {
+//     // 각 프로젝트에 대해 실행할 함수 호출
+//     $('.project').each(function () {
+//       revealOnScroll($(this));
+//     });
+//   });
 
-  // 프로젝트 나타나는 함수
-  function revealOnScroll(project) {
+//   // 프로젝트 나타나는 함수
+//   function revealOnScroll(project) {
 
-    const scroll = $(window).scrollTop(); // 스크롤 위치
-    const projectTop = project.offset().top; // 프로젝트 상단 위치
-    const windowHeight = $(window).height(); // 윈도우 높이
+//     const scroll = $(window).scrollTop(); // 스크롤 위치
+//     const projectTop = project.offset().top; // 프로젝트 상단 위치
+//     const windowHeight = $(window).height(); // 윈도우 높이
 
-    // 프로젝트가 화면에 50% 이상 나타났을 때
-    if (scroll + windowHeight / 2 > projectTop) {
-      project.addClass('active');
-    }
+//     // 프로젝트가 화면에 50% 이상 나타났을 때
+//     if (scroll + windowHeight / 2 > projectTop) {
+//       project.addClass('active');
+//     }
 
-    // 새로고침 시 페이지 최상단으로 이동
-    $(window).on('beforeunload', function () {
-      $(window).scrollTop(0);
-    });
-  }
-});
+//     // 새로고침 시 페이지 최상단으로 이동
+//     $(window).on('beforeunload', function () {
+//       $(window).scrollTop(0);
+//     });
+//   }
+// });
