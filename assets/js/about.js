@@ -15,7 +15,7 @@ $(document).ready(function () {
     const projectTop = project.offset().top; // 프로젝트 상단 위치
     const windowHeight = $(window).height(); // 윈도우 높이
 
-    if (scroll + windowHeight / .85 > projectTop) {
+    if (scroll + windowHeight / 1.25 > projectTop) {
       project.addClass('active');
     }
 

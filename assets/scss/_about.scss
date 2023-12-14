@@ -192,12 +192,12 @@ section.about-content {
   article.about-wrap {
     position: relative;
     opacity: 0;
-    transform: translateY(50%);
-    transition: opacity 1s ease-in-out, transform 1s;
+    transform: translateY(35%);
+    transition: opacity 1s cubic-bezier(.8, 0, 1, 1), transform 1s;
 
     align-items: flex-start;
     height: calc(100% - 20em);
-    padding-top: 30em;
+    padding-top: 10em;
 
     &.active {
       opacity: 1;
@@ -205,11 +205,11 @@ section.about-content {
     }
 
     &.p-t {
-      padding-top: 14em;
+      display: flex;
     }
 
     .about-text {
-      width: 100%;
+      width: calc(100% - 124px);
       padding: 2em 10em;
       color: #000;
 
@@ -222,7 +222,7 @@ section.about-content {
         position: relative;
         font-size: 2rem;
         font-weight: 400;
-        color: inherit;
+        color: $color-orange-400;
 
         &.point {
           font-weight: 400;
@@ -258,7 +258,6 @@ section.about-content {
 
       p {
         margin: 0;
-        margin-top: .5em;
         font-size: 2.4rem;
         font-weight: 100;
         color: inherit;

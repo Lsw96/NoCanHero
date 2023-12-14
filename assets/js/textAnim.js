@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  const textElement = document.querySelector('.text-animated');
+  const textElement = document.querySelector('.main-text-animated');
   const texts = [
     '무한한 가능성이 보이는 사람',
     '변화에 두렵지 않아 보이는 사람',

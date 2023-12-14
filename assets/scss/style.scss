@@ -63,10 +63,10 @@ body {
 }
 
 // index.html
-section {
+section.m-container {
   @include section-size;
 
-  article {
+  article.m-content {
     @include article-size;
 
     .main {
@@ -98,10 +98,10 @@ section {
 
       }
 
-      .text-container {
+      .main-text {
         height: 58px;
 
-        h4.text-animated {
+        h4.main-text-animated {
           margin: {
             top: 8px;
             bottom: 0;

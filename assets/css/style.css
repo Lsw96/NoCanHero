@@ -401,21 +401,21 @@ section.about-content.white {
 section.about-content article.about-wrap {
   position: relative;
   opacity: 0;
-  transform: translateY(50%);
-  transition: opacity 1s ease-in-out, transform 1s;
+  transform: translateY(35%);
+  transition: opacity 1s cubic-bezier(0.8, 0, 1, 1), transform 1s;
   align-items: flex-start;
   height: calc(100% - 20em);
-  padding-top: 30em;
+  padding-top: 10em;
 }
 section.about-content article.about-wrap.active {
   opacity: 1;
   transform: translateY(0);
 }
 section.about-content article.about-wrap.p-t {
-  padding-top: 14em;
+  display: flex;
 }
 section.about-content article.about-wrap .about-text {
-  width: 100%;
+  width: calc(100% - 124px);
   padding: 2em 10em;
   color: #000;
 }
@@ -427,7 +427,7 @@ section.about-content article.about-wrap .about-text h4 {
   position: relative;
   font-size: 2rem;
   font-weight: 400;
-  color: inherit;
+  color: #FF5000;
 }
 section.about-content article.about-wrap .about-text h4.point {
   font-weight: 400;
@@ -458,7 +458,6 @@ section.about-content article.about-wrap .about-text span {
 }
 section.about-content article.about-wrap .about-text p {
   margin: 0;
-  margin-top: 0.5em;
   font-size: 2.4rem;
   font-weight: 100;
   color: inherit;
@@ -550,12 +549,23 @@ body.ov-a {
 .p-container::-webkit-scrollbar {
   display: none;
 }
+.p-container .data {
+  position: absolute;
+  z-index: 999999;
+  top: 50%;
+  left: 47.5%;
+  transform-origin: top left;
+  transform: rotate(90deg) translate(-50%, -50%);
+  font-size: 1.8rem;
+  color: #fff;
+}
 .p-container .project {
   display: flex;
   width: calc(var(--hc-width) * var(--num-section));
   transform-origin: top left;
   transform: rotate(90deg) translateY(calc(var(--hc-height) * -1));
   background: linear-gradient(to right, #78AA7E, #78aaa8, #89aa78);
+  margin: 0;
 }
 .p-container .project .project-content {
   display: flex;
@@ -712,12 +722,12 @@ body.dark {
   color: #fff !important;
 }
 
-section {
+section.m-container {
   width: calc(100vw - 124px);
   height: 100vh;
   margin-left: 124px;
 }
-section article {
+section.m-container article.m-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -725,7 +735,7 @@ section article {
   height: 100%;
   padding-left: 55px;
 }
-section article .main {
+section.m-container article.m-content .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -733,7 +743,7 @@ section article .main {
   height: 100%;
   margin-bottom: 2em;
 }
-section article .main h1.main-title {
+section.m-container article.m-content .main h1.main-title {
   position: relative;
   left: -7px;
   margin-left: 2px;
@@ -745,7 +755,7 @@ section article .main h1.main-title {
   line-height: 1;
   word-spacing: 0;
 }
-section article .main h1.main-title::after {
+section.m-container article.m-content .main h1.main-title::after {
   content: "";
   position: absolute;
   top: -2px;
@@ -754,10 +764,10 @@ section article .main h1.main-title::after {
   height: 8px;
   background: #FF5000;
 }
-section article .main .text-container {
+section.m-container article.m-content .main .main-text {
   height: 58px;
 }
-section article .main .text-container h4.text-animated {
+section.m-container article.m-content .main .main-text h4.main-text-animated {
   margin-top: 8px;
   margin-bottom: 0;
   font-size: 1.8rem;
@@ -766,10 +776,10 @@ section article .main .text-container h4.text-animated {
   word-spacing: 1.25px;
   white-space: nowrap;
 }
-section article .main a {
+section.m-container article.m-content .main a {
   width: 128px;
 }
-section article .main a button.comet {
+section.m-container article.m-content .main a button.comet {
   cursor: pointer;
   width: 96px;
   height: 28px;
@@ -782,13 +792,13 @@ section article .main a button.comet {
   box-shadow: inset -2px 2px 4px rgba(0, 0, 0, 0.1);
   animation: updown-a 1s ease infinite;
 }
-section article .main ul.link-box {
+section.m-container article.m-content .main ul.link-box {
   position: absolute;
   bottom: 22px;
   display: flex;
   padding: 0;
 }
-section article .main ul.link-box li {
+section.m-container article.m-content .main ul.link-box li {
   font-size: 1.2rem;
   font-family: "Geomanist-light";
   font-weight: 600;
@@ -796,19 +806,19 @@ section article .main ul.link-box li {
   text-transform: uppercase;
   white-space: nowrap;
 }
-section article .main ul.link-box li:not(:nth-child(3))::after {
+section.m-container article.m-content .main ul.link-box li:not(:nth-child(3))::after {
   content: "|";
   margin: 0 1.6em;
 }
-section article .main ul.link-box li a {
+section.m-container article.m-content .main ul.link-box li a {
   position: relative;
   color: inherit;
   letter-spacing: 0.5px;
 }
-section article .main ul.link-box li a:hover {
+section.m-container article.m-content .main ul.link-box li a:hover {
   color: #666;
 }
-section article .main #canvas-float {
+section.m-container article.m-content .main #canvas-float {
   position: relative;
 }
 
