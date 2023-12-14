@@ -1,5 +1,5 @@
 body.ov-a {
-  background: #78AA7E;
+  background: linear-gradient(to right, #78AA7E, #78aaa8, #89aa78);
 }
 
 .p-container {
@@ -12,27 +12,22 @@ body.ov-a {
   margin-left: 124px;
   transform-origin: top left;
   transform: rotate(-90deg) translateX(calc(var(--hc-height) * -1));
+
   &::-webkit-scrollbar {
     display: none;
   }
 
-  .data {
-    position: absolute;
-    z-index: 999999;
-    top: 50%;
-    left: 47.5%;
-    transform-origin: top left;
-    transform: rotate(90deg) translate(-50%, -50%);
-    font-size: 1.8rem;
-    color: #fff;
-  }
-  
   .project {
     display: flex;
     width: calc(var(--hc-width) * var(--num-section));
     transform-origin: top left;
     transform: rotate(90deg) translateY(calc(var(--hc-height) * -1));
-    background: linear-gradient(to right, #78AA7E, #78aaa8, #89aa78);
+    background-image: linear-gradient(rgba(102, 126, 89, 0.15) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(102, 126, 89, 0.15) 2px, transparent 2px),
+      linear-gradient(rgba(102, 126, 89, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(102, 126, 89, 0.1) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
     margin: 0;
 
     .project-content {
@@ -104,7 +99,7 @@ body.ov-a {
             li {
               position: relative;
               padding: 0 1em;
-              
+
               img {
                 width: 40px;
                 height: 40px;

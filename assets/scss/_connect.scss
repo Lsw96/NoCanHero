@@ -2,6 +2,7 @@ section {
   @include section-size;
 
   article.connect-box {
+    @include article-size;
     .connect {
       display: flex;
       flex-direction: column;

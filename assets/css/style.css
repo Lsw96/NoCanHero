@@ -532,7 +532,7 @@ section.about-content article.about-wrap .about-text p.text {
   }
 }
 body.ov-a {
-  background: #78AA7E;
+  background: linear-gradient(to right, #78AA7E, #78aaa8, #89aa78);
 }
 
 .p-container {
@@ -549,22 +549,14 @@ body.ov-a {
 .p-container::-webkit-scrollbar {
   display: none;
 }
-.p-container .data {
-  position: absolute;
-  z-index: 999999;
-  top: 50%;
-  left: 47.5%;
-  transform-origin: top left;
-  transform: rotate(90deg) translate(-50%, -50%);
-  font-size: 1.8rem;
-  color: #fff;
-}
 .p-container .project {
   display: flex;
   width: calc(var(--hc-width) * var(--num-section));
   transform-origin: top left;
   transform: rotate(90deg) translateY(calc(var(--hc-height) * -1));
-  background: linear-gradient(to right, #78AA7E, #78aaa8, #89aa78);
+  background-image: linear-gradient(rgba(102, 126, 89, 0.15) 2px, transparent 2px), linear-gradient(90deg, rgba(102, 126, 89, 0.15) 2px, transparent 2px), linear-gradient(rgba(102, 126, 89, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(102, 126, 89, 0.1) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
   margin: 0;
 }
 .p-container .project .project-content {
@@ -641,6 +633,14 @@ section {
   width: calc(100vw - 124px);
   height: 100vh;
   margin-left: 124px;
+}
+section article.connect-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 110px);
+  height: 100%;
+  padding-left: 55px;
 }
 section article.connect-box .connect {
   display: flex;
