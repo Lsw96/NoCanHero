@@ -22,7 +22,7 @@ let colorMode = 'black'; // 초기 색상 모드
 sphere(canvasFloat, skills, counts, { ...options, colorMode });
 
 // Dark Mode
-$('.switch').on('click', () => {
+$('.dark-mode').on('click', () => {
 
   colorMode = colorMode === 'black' ? 'white' : 'black';
   sphere(canvasFloat, skills, counts, { ...options, colorMode });

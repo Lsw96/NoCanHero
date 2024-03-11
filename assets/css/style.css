@@ -82,6 +82,11 @@ aside nav .logo-wrap {
   height: 136px;
   background: #000;
 }
+aside nav .logo-wrap .logo-click {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
 aside nav .logo-wrap .logo-box {
   width: 80px;
   height: 60px;
@@ -120,30 +125,31 @@ aside nav ul {
   width: 100%;
   transform: translateY(-50%);
 }
-aside nav ul li {
-  width: 100%;
-  padding: 1rem 0;
-  text-align: center;
-  border-top: 0.1px solid rgba(255, 255, 255, 0.2);
-}
-aside nav ul li:nth-child(3) {
-  border-bottom: 0.1px solid rgba(255, 255, 255, 0.2);
-}
-aside nav ul li a {
+aside nav ul a {
   font-size: 1.2rem;
   font-weight: 100;
   letter-spacing: 0.5px;
   color: #f2f2f2;
 }
-aside nav ul li a:hover {
+aside nav ul a:hover {
   transition: color 0.15s;
-  color: #ced4da;
+  color: #868e96;
+}
+aside nav ul a li {
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 0.1px solid rgba(255, 255, 255, 0.2);
+}
+aside nav ul a li.line {
+  border-bottom: 0.1px solid rgba(255, 255, 255, 0.2);
 }
 aside .dark-mode {
   position: relative;
   width: calc(100% - 48px);
   height: 18px;
   border: 1px solid #f1f3f5;
+  cursor: pointer;
 }
 aside .dark-mode .switch {
   width: 16px;
@@ -153,7 +159,6 @@ aside .dark-mode .switch {
   position: absolute;
   top: 0.8px;
   left: 2px;
-  cursor: pointer;
   transition: all 0.3s cubic-bezier(0.8, 0, 1, 1);
 }
 aside .dark-mode .switch.active {

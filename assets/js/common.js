@@ -1,5 +1,5 @@
 // Dark Mode
-$('.switch').on('click', () => {
+$('.dark-mode').on('click', () => {
 
   $('.switch').toggleClass('active');
   $('body').toggleClass('dark');
