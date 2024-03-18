@@ -1,4 +1,5 @@
-// main-slide
+// main.visual > slide-wrap animation
+//========================================
 const slideImg = document.querySelector(".slide-img");
 const clone = slideImg.cloneNode(true);
 
@@ -11,3 +12,4 @@ document.querySelector(".slide-img").offsetWidth + "px";
 // assignment class
 slideImg.classList.add("original");
 clone.classList.add("clone");
+//========================================
