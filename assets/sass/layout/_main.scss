@@ -1,0 +1,41 @@
+main.visual {
+  min-width: 328px;
+  .visual-image {
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    max-height: 100vh;
+  }
+}
+
+.slide-wrap {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  left: 0;
+  bottom: 42px;
+}
+
+.slide-img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-left: 0;
+  height: 100%;
+
+  li {
+    width: 100%;
+
+    img {
+      height: auto;
+    }
+  }
+
+  &.original {
+    animation: 80s slide01 linear 0s infinite normal forwards running;
+  }
+
+  &.clone {
+    animation: 80s slide02 linear 0s infinite normal none running;
+  }
+}

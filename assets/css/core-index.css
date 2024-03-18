@@ -1,19 +1,14 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
-}
-
-body {
-  line-height: 1;
 }
 
 ol, ul {
@@ -37,4 +32,224 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+}
+
+/* slide-original */
+@keyframes slide01 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  50.01% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* slide-clone */
+@keyframes slide02 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  background: #121212;
+}
+
+header {
+  overflow: hidden;
+  width: 100%;
+}
+header::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 128px;
+  background: linear-gradient(to bottom, #0b0b0b, rgba(0, 0, 0, 0) 65%);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  mix-blend-mode: difference;
+  width: calc(100% - 120px);
+  margin: 48px 60px;
+}
+
+.logo {
+  width: 168px;
+  min-width: 124px;
+  margin-right: auto;
+}
+.logo a > img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  margin-left: 28px;
+}
+.menu ul {
+  display: flex;
+}
+.menu ul li {
+  width: 80px;
+  margin: 0 18px;
+  text-align: center;
+}
+.menu ul li a {
+  color: #fff;
+}
+
+.container {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main.visual {
+  min-width: 328px;
+}
+main.visual .visual-image {
+  width: 100%;
+  max-width: 1920px;
+  height: auto;
+  max-height: 100vh;
+}
+
+.slide-wrap {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  left: 0;
+  bottom: 42px;
+}
+
+.slide-img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-left: 0;
+  height: 100%;
+}
+.slide-img li {
+  width: 100%;
+}
+.slide-img li img {
+  height: auto;
+}
+.slide-img.original {
+  animation: 80s slide01 linear 0s infinite normal forwards running;
+}
+.slide-img.clone {
+  animation: 80s slide02 linear 0s infinite normal none running;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  min-width: 328px;
+  background: #000;
+  height: 100vh;
+}
+
+.planning {
+  width: 100%;
+  height: 100%;
+  margin-top: -42px;
+  padding: 96px 0;
+  background: #fefefe;
+}
+
+.pn-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20%;
+}
+.pn-title-wrap h1.pn-main-t {
+  width: 30%;
+  white-space: nowrap;
+}
+.pn-title-wrap .pn-sub-t {
+  width: 50%;
+}
+.pn-title-wrap .pn-sub-t b > p {
+  margin-bottom: 0.5em;
+}
+
+/*====================================
+너비가 720px 이하일 때
+======================================*/
+@media screen and (max-width: 720px) {
+  body {
+    /* 12px */
+    font-size: 0.75rem;
+    line-height: 1.25;
+  }
+  header {
+    width: 100%;
+    height: 96px;
+    background: #121212;
+  }
+  nav {
+    flex-direction: column;
+    justify-content: space-around;
+    width: calc(100% - 96px);
+    height: 84px;
+    margin: 9px 48px;
+    mix-blend-mode: normal;
+  }
+  nav .logo {
+    width: 148px;
+    margin: 0;
+  }
+  .menu ul > li {
+    width: 48px;
+    margin: 0 12px;
+  }
+  .visual-image {
+    max-width: 720px !important;
+  }
+  .slide-wrap {
+    bottom: 48px;
+  }
+  .slide-wrap .slide-img li img {
+    height: 48px;
+  }
+  .planning {
+    margin-top: -48px;
+  }
 }

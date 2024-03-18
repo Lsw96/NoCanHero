@@ -1,0 +1,63 @@
+/*====================================
+너비가 720px 이하일 때
+======================================*/
+@media screen and (max-width: 720px) {
+  body {
+    /* 12px */
+    font-size: 0.75rem;
+    line-height: 1.25;
+  }
+
+  // header
+  // -----------------------------------
+  header {
+    width: 100%;
+    height: 96px;
+    background: #121212;
+  }
+  nav {
+    flex-direction: column;
+    justify-content: space-around;
+    width: calc(100% - 96px);
+    height: 84px;
+    margin: 9px 48px;
+    mix-blend-mode: normal;
+
+    .logo {
+      width: 148px;
+      margin: 0;
+    }
+  }
+
+  // main, visual, slide
+  // -----------------------------------
+  .menu {
+    ul>li {
+      width: 48px;
+      margin: 0 12px;
+    }
+  }
+
+  .visual-image {
+    max-width: 720px !important;
+  }
+
+  .slide-wrap {
+    bottom: 48px;
+
+    .slide-img {
+      li img {
+        height: 48px;
+      }
+    }
+  }
+
+  // section-planning
+  // -----------------------------------
+  .planning {
+    margin-top: -48px;
+  }
+
+}
+
+// 너비가 720px이하일 때
