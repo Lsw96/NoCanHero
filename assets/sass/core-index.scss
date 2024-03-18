@@ -1,0 +1,14 @@
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+@import './base/reset';
+@import './base/font';
+@import './base/anumations';
+
+@import './layout/body';
+@import './layout/header';
+@import './layout/section';
+@import './layout/article';
+@import './layout/footer';
+
+
