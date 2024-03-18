@@ -1,0 +1,28 @@
+$suit-path: '../fonts/Suit/';
+$Montserrat-path: '../fonts/Montserrat/';
+
+@font-face {
+  font-family: "Suit-medium";
+  src: url('#{$suit-path}SUIT-Medium.woff2') format("woff2"), url('#{$suit-path}SUIT-Medium.ttf') format("truetype");
+}
+@font-face {
+  font-family: "Suit-semiBold";
+  src: url('#{$suit-path}SUIT-Medium.woff2') format("woff2"), url('#{$suit-path}SUIT-Medium.ttf') format("truetype");
+}
+@font-face {
+  font-family: "Suit-bold";
+  src: url('#{$suit-path}SUIT-Medium.woff2') format("woff2"), url('#{$suit-path}SUIT-Medium.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat-medium";
+  src: url('#{$Montserrat-path}Montserrat-Medium.woff2') format("woff2"), url('#{$Montserrat-path}Montserrat-Medium.woff') format("woff"), url('#{$Montserrat-path}Montserrat-Medium.ttf') format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-semiBold";
+  src: url('#{$Montserrat-path}Montserrat-SemiBold.woff2') format("woff2"), url('#{$Montserrat-path}Montserrat-SemiBold.woff') format("woff"), url('#{$Montserrat-path}Montserrat-SemiBold.ttf') format("truetype");
+}
+@font-face {
+  font-family: "Montserrat-bold";
+  src: url('#{$Montserrat-path}Montserrat-Bold.woff2') format("woff2"), url('#{$Montserrat-path}Montserrat-Bold.woff') format("woff"), url('#{$Montserrat-path}Montserrat-Bold.ttf') format("truetype");
+}
