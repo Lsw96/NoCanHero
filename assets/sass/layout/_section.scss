@@ -1,19 +1,22 @@
 section {
-  @include min-size(328px);
+  @include min-size(316px);
   background: #000;
   height: 100vh;
 }
 
-.planning {
+// Planning 01 CSS
+// =================================================
+section.planning {
   height: 100%;
-  margin-top: -42px;
-  padding: 12% 0;
-  background: #fefefe;
 }
+
 .pn-title-wraper {
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-top: -42px;
+  padding: 12% 0;
+  background: #fefefe;
 
   .pn-main-t {
     font-size: 1.75rem;
@@ -28,10 +31,75 @@ section {
   .pn-sub-t {
     font-family: 'Suit-bold', sans-serif;
     .pn-sub-t-box {
-      width: 500px;
+      width: 515px;
       b > p {
         margin-bottom: 0.5em;
       }
     }
+  }
+}
+// Planning 02 CSS
+// =================================================
+.pn-img-wraper {
+  
+  ul.img-wrap {
+    display: flex;
+    justify-content: center;
+    font-family: 'Suit-bold', sans-serif;
+    color: #fff;
+  }
+}
+
+li.img-item {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  > span {
+    font-size: 1.125em;
+  }
+
+  .img-item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    min-height: 687px;
+    > h3 {
+      margin-top: auto;
+      font-size: 2rem;
+    }
+    > p {
+      margin: 1.5em 0;
+      font-family: 'Suit-medium', sans-serif;
+    }
+  }
+}
+.img-item:nth-child(1) {
+  background-image: url(../img/planning01.jpg);
+}
+.img-item:nth-child(2) {
+  background-image: url(../img/planning02.jpg);
+}
+.img-item:nth-child(3) {
+  background-image: url(../img/planning03.jpg);
+}
+// Planning 03 CSS
+// =================================================
+.pn-middle-wrap {
+  padding-top: 6%;
+  padding-left: 10%;
+  padding-bottom: 3%;
+  color: #fff;
+  h2.pn-middle-title {
+    font-family: 'Montserrat-bold', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+  p.pn-middle-subTitle {
+    padding: 1em 0;
   }
 }
