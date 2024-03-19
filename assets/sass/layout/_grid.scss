@@ -21,14 +21,15 @@
     width: calc(100% - 96px);
     height: 84px;
     margin: 9px 48px;
-    
+
     .logo {
       width: 148px;
       margin: 0;
+
       &:hover {
         filter: invert(.25);
       }
-      
+
     }
   }
 
@@ -36,6 +37,7 @@
   // -----------------------------------
   .menu {
     margin-left: -8px;
+
     ul>li {
       width: 48px;
       margin: 0 12px;
@@ -128,7 +130,56 @@
     }
   }
 
+  .planning-two-pg {
+    height: auto;
+  }
 
-}
+  .research-border-box {
+    height: auto;
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
 
-// 너비가 720px이하일 때
+  .research-graph-box {
+    height: auto;
+    >h2 {
+      font-size: 1.75em;
+    }
+  }
+
+  .graph-wrapper-box {
+    height: calc(100% - 9.5em);
+    padding: 2em 1em;
+  }
+
+  .graph-wrap {
+    gap: 0;
+  }
+
+  .graph-img {
+    width: 100%;
+    height: 100%;
+    margin-top: 1em;
+  }
+
+  .graph-wrap-one {
+    padding-right: 12px;
+    > p {
+      min-width: 100px;
+    }
+  }
+  
+  .graph-wrap-two {
+    > p {
+      min-width: 100px;
+    }
+  }
+
+  .graph-wrap-three {
+    display: none;
+  }
+} // 너비가 720px이하일 때

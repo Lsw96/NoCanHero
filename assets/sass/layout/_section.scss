@@ -22,26 +22,30 @@ section.planning {
     font-size: 1.75rem;
     margin-right: 5%;
     font-family: 'Suit-bold', sans-serif;
-    
-    p, span {
+
+    p,
+    span {
       font-weight: 900;
     }
   }
 
   .pn-sub-t {
     font-family: 'Suit-bold', sans-serif;
+
     .pn-sub-t-box {
       width: 515px;
-      b > p {
+
+      b>p {
         margin-bottom: 0.5em;
       }
     }
   }
 }
+
 // Planning 02 CSS
 // =================================================
 .pn-img-wraper {
-  
+
   ul.img-wrap {
     display: flex;
     justify-content: center;
@@ -57,7 +61,8 @@ li.img-item {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  > span {
+
+  >span {
     font-size: 1.125em;
   }
 
@@ -68,38 +73,175 @@ li.img-item {
     align-items: flex-start;
     height: 100%;
     min-height: 687px;
-    > h3 {
+
+    >h3 {
       margin-top: auto;
       font-size: 2rem;
     }
-    > p {
+
+    >p {
       margin: 1.5em 0;
       font-family: 'Suit-medium', sans-serif;
     }
   }
 }
+
 .img-item:nth-child(1) {
   background-image: url(../img/planning01.jpg);
 }
+
 .img-item:nth-child(2) {
   background-image: url(../img/planning02.jpg);
 }
+
 .img-item:nth-child(3) {
   background-image: url(../img/planning03.jpg);
 }
+
 // Planning 03 CSS
 // =================================================
 .pn-middle-wrap {
-  padding-top: 6%;
-  padding-left: 10%;
-  padding-bottom: 3%;
+  padding: 10% 0 3% 10%;
   color: #fff;
+
   h2.pn-middle-title {
     font-family: 'Montserrat-bold', sans-serif;
     font-size: 2em;
     text-transform: uppercase;
+    text-shadow: 0 0 6px #fff;
+    letter-spacing: 1px;
   }
+
   p.pn-middle-subTitle {
     padding: 1em 0;
+  }
+}
+
+// Planning 04 CSS
+// =================================================
+.planning-two-pg {
+  height: 100vmin;
+  max-height: 1080px;
+  min-height: 316px;
+  padding: 0 5%;
+}
+
+.research-container {
+  position: relative;
+  height: 100%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #FF37F7;
+    top: -4px;
+    left: -4px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #FF37F7;
+    top: -4px;
+    right: -4px;
+  }
+}
+
+.research-border-box {
+  height: 100%;
+  border: 1px solid #FF37F7;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #FF37F7;
+    bottom: -4px;
+    right: -4px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #FF37F7;
+    bottom: -4px;
+    left: -4px;
+  }
+}
+
+.research-graph-box {
+  height: calc(100% - 4em);
+  margin: 2em;
+  border: 1px solid #FF37F7;
+  color: #fff;
+
+  >h2 {
+    padding: .25em;
+    padding-left: 1.25em;
+    font-family: 'Montserrat-bold', sans-serif;
+    font-size: 2.5em;
+    background: #FF37F7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.graph-wrapper-box {
+  height: calc(100% - 11em);
+  padding: 2em 3em;
+}
+
+.graph-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.graph-wrap {
+  display: flex;
+  height: 50%;
+  gap: 0 16px;
+}
+
+.graph-wrap-one {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.graph-wrap-two {
+  width: 50%;
+  height: 100%;
+}
+
+h2.question {
+  font-family: 'Suit-bold', sans-serif;
+  margin-bottom: 8px;
+}
+
+.graph-img {
+  width: 75%;
+  height: 50%;
+  margin-top: 1.25em;
+}
+
+.graph-wrap-three {
+  width: 100%;
+  height: 50%;
+  margin-top: .5em;
+  border-top: 1px dotted rgba(255, 255, 255, .5);
+  > h2 {
+    margin-top: 1em;
+  }
+  > .graph-img {
+    width: 100%;
+    height: 65%;
   }
 }
