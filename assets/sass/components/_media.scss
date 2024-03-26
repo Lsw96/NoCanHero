@@ -1,6 +1,60 @@
-/*====================================
-너비가 720px 이하일 때
-======================================*/
+@media screen and (max-width: 1210px) {
+  .pn-insight-wrapper {
+    .pn-insight-wrap {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 95%;
+      }
+    }
+  }
+
+  .pn-insight-three {
+    padding: 2em 0;
+    padding-top: 0;
+  }
+
+  .circle-list {
+    margin: 0 2.5em;
+  }
+  
+  .circle-title {
+    font-size: 1rem;
+  }
+
+  .circle-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 24px;
+    margin: 0 3em;
+
+    .circle {
+      width: 50%;
+
+      .inside {
+        font-size: .85em;
+      }
+    }
+  }
+  
+  .pn-hero-wrapper {
+    bottom: 12%;
+    margin: 0 6%;
+  }
+  
+  .pn-hero-wrap {
+    >h3 {
+      font-size: 1.125rem;
+    }
+    >p {
+      font-size: 0.75rem;
+    }
+  }
+
+} // 너비가 1210이하 일 때
+
 @media screen and (max-width: 720px) {
 
   .visual-image {
@@ -24,7 +78,7 @@
     padding: 8.4% 0;
   }
 
-  .pn-title-wraper {
+  .pn-title-wrapper {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -81,9 +135,11 @@
 
   .research-border-box {
     height: auto;
+
     &::before {
       display: none;
     }
+
     &::after {
       display: none;
     }
@@ -91,6 +147,8 @@
 
   .research-graph-box {
     height: auto;
+    margin: .75em;
+
     >h2 {
       font-size: 1.75em;
     }
@@ -98,7 +156,7 @@
 
   .graph-wrapper-box {
     height: calc(100% - 9.5em);
-    padding: 2em 1em;
+    padding: 1em;
   }
 
   .graph-wrap {
@@ -113,18 +171,176 @@
 
   .graph-wrap-one {
     padding-right: 12px;
-    > p {
+
+    >p {
       min-width: 100px;
-    }
-  }
-  
-  .graph-wrap-two {
-    > p {
-      min-width: 100px;
+      font-size: .95em;
     }
   }
 
-  .graph-wrap-three {
-    display: none;
+  .graph-wrap-two {
+    >p {
+      min-width: 100px;
+      font-size: .975em;
+    }
   }
-} // 너비가 720px이하일 때
+
+  h2.question {
+    margin-bottom: 0;
+  }
+
+  .graph-wrap-three {
+    >h2 {
+      margin-top: 0.25em;
+    }
+
+    >p {
+      font-size: .975em;
+    }
+  }
+
+  .pn-insight-two {
+    padding: 3em 0;
+    padding-bottom: 3%;
+  }
+
+  .pn-insight-wrapper {
+    .pn-insight-wrap {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 100%;
+        min-height: 84px;
+      }
+    }
+  }
+
+  .pn-insight-three {
+    padding: 3em 0;
+    padding-top: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .circle-list {
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    li {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  .circle-title {
+    font-size: 1.5em;
+  }
+
+  .circle-box {
+    flex: 2;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+
+    &::before {
+      left: 50%;
+      width: 1px;
+      height: 105%;
+    }
+
+    &::after {
+      content: '▼';
+      height: 0;
+      top: auto;
+      right: auto;
+      left: 50%;
+      bottom: -1.5%;
+      transform: translateX(-50%);
+    }
+
+    .circle {
+      width: 50%;
+      margin: 0;
+
+      .inside {
+        width: 80%;
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  .pn-hero-wrapper {
+    align-items: flex-end;
+  }
+  .pn-hero-wrap {
+    padding-left: 8%;
+  }
+
+}// 너비가 720px이하일 때
+
+@media screen and (max-width: 624px) {
+  .circle-box {
+    .circle {
+      .inside {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .pn-hero-wrapper {
+    bottom: 8%;
+  }
+  
+  .pn-hero-wrap {
+    >h3 {
+      font-size: .9rem;
+      margin-bottom: .75em;
+    }
+    >p {
+      font-size: 0.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 524px) {
+  
+  .circle-title {
+    font-size: 1.25em;
+  }
+
+  .pn-hero-pg {
+    padding-top: 4em;
+  }
+
+  .pn-hero-wrapper {
+    >img {
+      min-width: 128px;
+    }
+  }
+}
+
+@media screen and (max-width: 412px) {
+  
+  .circle-title {
+    font-size: 1em;
+  }
+
+  .circle-box {
+    .circle {
+      .inside {
+        font-size: .8em;
+      }
+    }
+  }
+
+  .pn-hero-wrap {
+    >h3 {
+      font-size: .6rem;
+      margin-bottom: .5em;
+    }
+  }
+}

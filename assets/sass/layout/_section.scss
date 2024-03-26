@@ -10,7 +10,7 @@ section.planning {
   height: 100%;
 }
 
-.pn-title-wraper {
+.pn-title-wrapper {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -44,7 +44,7 @@ section.planning {
 
 // Planning 02 CSS
 // =================================================
-.pn-img-wraper {
+.pn-img-wrapper {
 
   ul.img-wrap {
     display: flex;
@@ -157,8 +157,8 @@ li.img-item {
 }
 
 .research-graph-box {
-  height: calc(100% - 4em);
-  margin: 2em;
+  height: calc(100% - 3em);
+  margin: 1.5em;
   border: 1px solid $main-color;
   color: #fff;
 
@@ -228,6 +228,106 @@ h2.question {
   }
 }
 
-.pn-insight-two {}
+.pn-insight-two {
+  padding: 6em 0;
+  padding-bottom: 3%;
+}
 
-.pn-insight-box {}
+.pn-insight-wrapper {
+  display: flex;
+  flex-direction: column;
+  .pn-insight-wrap {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: auto;
+    }
+  }
+}
+
+.pn-insight-wrap.pos-side {
+  justify-content: flex-end;
+}
+
+.pn-insight-wrap.pos-m_side {
+  justify-content: space-around;
+}
+
+.pn-insight-three {
+  width: 100%;
+  padding: 6em 0;
+}
+
+.circle-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 6em;
+  li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.circle-title {
+  font-size: 1.25rem;
+  font-family: $mt-md;
+  text-transform: uppercase;
+  color: $gray-color;
+}
+
+.circle-box {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 48px;
+  margin: 0 8em;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 105%;
+    height: 1px;
+    background: $white-color;
+  }
+
+  &::after {
+    content: '▶';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -3.5%;
+    transform: translateY(-47.5%);
+    color: $white-color;
+  }
+}
+
+.circle {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  border-radius: 50%;
+  margin: 20px auto;
+  text-align: center;
+  border: 1px solid $white-color;
+  background: $black-color;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.inside {
+  display: block;
+  text-transform: uppercase;
+  color: $white-color;
+  font-size: 1rem;
+}
