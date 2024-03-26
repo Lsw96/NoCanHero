@@ -331,3 +331,40 @@ h2.question {
   color: $white-color;
   font-size: 1rem;
 }
+
+.pn-logo-pg {
+  min-width: 328px;
+  .pn-logo {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    min-height: 840px;
+    max-height: 100vh;
+  }
+}
+
+// design pg
+
+.design-hero-pg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 1080px;
+  max-height: 100vh;
+  background-image: url('../img/design-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  >img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  }
+  
+  .pn-middle-wrap {
+    position: relative;
+    z-index: 2;
+  }
+}
