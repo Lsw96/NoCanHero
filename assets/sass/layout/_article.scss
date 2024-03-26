@@ -1,0 +1,32 @@
+article.pn-middle-wrap {
+  padding: 10% 0 3% 10%;
+  color: #fff;
+
+  h2.pn-middle-title {
+    font-family: 'Montserrat-bold', sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-shadow: 0 0 6px #fff;
+    letter-spacing: 1px;
+  }
+
+  p.pn-middle-subTitle {
+    padding: 1em 0;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .pn-middle-wrap {
+    padding: 0 5%;
+
+    h2.pn-middle-title {
+      margin-top: 2em;
+      text-shadow: 2px;
+    }
+
+    p.pn-middle-subTitle {
+      width: 100%;
+      min-width: 272px;
+    }
+  }
+}

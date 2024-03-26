@@ -1,17 +1,13 @@
 // color
-$main-color: #59362f;
-$light-gray-color: #f5f5f5;
-$gray-color: #bdbdbd;
-$dark-gray-color: #828282;
-$white-color: #ffffff;
-$red-color: #C03615;
-$black-color: #000000;
-$kakao-color: #f2c94c;
+$main-color: #FF37F7;
+$sub-color: #5A20FF;
+$black-color: #0C021A;
+$white-color: #F9F8FD;
 
 // font
-$base-font: "Archivo", sans-serif;
-$font-weights: (
-  "regular": 400,
-  "medium": 600,
-  "bold": 700,
-);
+$base-font: "Suit-medium", sans-serif;
+$suit-sb: "Suit-semiBold", sans-serif;
+$suit-b: "Suit-bold", sans-serif;
+$mt-md: "Montserrat-medium", sans-serif;
+$mt-sb: "Montserrat-semiBold", sans-serif;
+$mt-b: "Montserrat-bold", sans-serif;

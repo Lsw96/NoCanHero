@@ -6,7 +6,13 @@ html {
 body {
   height: 100%;
   font-size: 1rem; // 16px
-  font-family: 'Suit-medium', sans-serif;
+  font-family: $base-font;
   line-height: 1.5;
-  background: #121212;
+  background: #0c0c0c;
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    font-size: 0.75rem; // 12px
+  }
 }

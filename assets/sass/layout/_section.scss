@@ -1,7 +1,7 @@
 section {
   @include min-size(316px);
-  background: #000;
-  height: 100vh;
+  background: $black-color;
+  // height: 100vh;
 }
 
 // Planning 01 CSS
@@ -16,12 +16,12 @@ section.planning {
   width: 100%;
   margin-top: -42px;
   padding: 12% 0;
-  background: #fefefe;
+  background: $white-color;
 
   .pn-main-t {
     font-size: 1.75rem;
     margin-right: 5%;
-    font-family: 'Suit-bold', sans-serif;
+    font-family: $suit-b;
 
     p,
     span {
@@ -30,7 +30,7 @@ section.planning {
   }
 
   .pn-sub-t {
-    font-family: 'Suit-bold', sans-serif;
+    font-family: $suit-b;
 
     .pn-sub-t-box {
       width: 515px;
@@ -49,7 +49,7 @@ section.planning {
   ul.img-wrap {
     display: flex;
     justify-content: center;
-    font-family: 'Suit-bold', sans-serif;
+    font-family: $suit-b;
     color: #fff;
   }
 }
@@ -81,7 +81,6 @@ li.img-item {
 
     >p {
       margin: 1.5em 0;
-      font-family: 'Suit-medium', sans-serif;
     }
   }
 }
@@ -96,25 +95,6 @@ li.img-item {
 
 .img-item:nth-child(3) {
   background-image: url(../img/planning03.jpg);
-}
-
-// Planning 03 CSS
-// =================================================
-.pn-middle-wrap {
-  padding: 10% 0 3% 10%;
-  color: #fff;
-
-  h2.pn-middle-title {
-    font-family: 'Montserrat-bold', sans-serif;
-    font-size: 2em;
-    text-transform: uppercase;
-    text-shadow: 0 0 6px #fff;
-    letter-spacing: 1px;
-  }
-
-  p.pn-middle-subTitle {
-    padding: 1em 0;
-  }
 }
 
 // Planning 04 CSS
@@ -135,7 +115,7 @@ li.img-item {
     position: absolute;
     width: 8px;
     height: 8px;
-    background: #FF37F7;
+    background: $main-color;
     top: -4px;
     left: -4px;
   }
@@ -145,7 +125,7 @@ li.img-item {
     position: absolute;
     width: 8px;
     height: 8px;
-    background: #FF37F7;
+    background: $main-color;
     top: -4px;
     right: -4px;
   }
@@ -153,14 +133,14 @@ li.img-item {
 
 .research-border-box {
   height: 100%;
-  border: 1px solid #FF37F7;
+  border: 1px solid $main-color;
 
   &::before {
     content: '';
     position: absolute;
     width: 8px;
     height: 8px;
-    background: #FF37F7;
+    background: $main-color;
     bottom: -4px;
     right: -4px;
   }
@@ -170,7 +150,7 @@ li.img-item {
     position: absolute;
     width: 8px;
     height: 8px;
-    background: #FF37F7;
+    background: $main-color;
     bottom: -4px;
     left: -4px;
   }
@@ -179,15 +159,15 @@ li.img-item {
 .research-graph-box {
   height: calc(100% - 4em);
   margin: 2em;
-  border: 1px solid #FF37F7;
+  border: 1px solid $main-color;
   color: #fff;
 
   >h2 {
     padding: .25em;
     padding-left: 1.25em;
-    font-family: 'Montserrat-bold', sans-serif;
+    font-family: $mt-b;
     font-size: 2.5em;
-    background: #FF37F7;
+    background: $main-color;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
@@ -222,7 +202,7 @@ li.img-item {
 }
 
 h2.question {
-  font-family: 'Suit-bold', sans-serif;
+  font-family: $suit-b;
   margin-bottom: 8px;
 }
 
@@ -237,11 +217,17 @@ h2.question {
   height: 50%;
   margin-top: .5em;
   border-top: 1px dotted rgba(255, 255, 255, .5);
-  > h2 {
+
+  >h2 {
     margin-top: 1em;
   }
-  > .graph-img {
+
+  >.graph-img {
     width: 100%;
     height: 65%;
   }
 }
+
+.pn-insight-two {}
+
+.pn-insight-box {}
