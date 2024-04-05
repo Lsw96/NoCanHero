@@ -576,21 +576,130 @@ h2.question {
   z-index: 2;
 }
 
-article.pn-middle-wrap {
+.ds-gui-wrap {
+  display: flex;
+  flex-direction: row;
+  padding: 0 3% 3% 5%;
+  color: #F9F8FD;
+}
+
+.ds-gui-font {
+  flex: 1;
+}
+.ds-gui-font dl {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-transform: uppercase;
+}
+.ds-gui-font dl dt {
+  font-family: "Montserrat-semiBold", sans-serif;
+  margin-bottom: 1em;
+}
+.ds-gui-font dl dd {
+  line-height: 1.2;
+  font-size: 2.625rem;
+  font-family: "Montserrat-medium", sans-serif;
+}
+.ds-gui-font dl dd:nth-of-type(2) {
+  font-family: "Montserrat-semiBold", sans-serif;
+  font-size: 2.67rem;
+}
+.ds-gui-font dl dd:nth-of-type(3) {
+  font-family: "Montserrat-bold", sans-serif;
+  font-size: 2.7rem;
+}
+.ds-gui-font dl #font-1 {
+  font-family: "Suit-medium", sans-serif;
+}
+.ds-gui-font dl #font-2 {
+  font-family: "Suit-semiBold", sans-serif;
+  font-size: 2.67rem;
+}
+.ds-gui-font dl #font-3 {
+  font-family: "Suit-bold", sans-serif;
+  font-size: 2.7rem;
+}
+.ds-gui-font dl:nth-of-type(2) {
+  margin-top: 2.5em;
+}
+
+.ds-gui-color {
+  flex: 1;
+}
+.ds-gui-color p {
+  margin-bottom: 1.6em;
+  font-size: 0.875rem;
+  font-family: "Montserrat-bold", sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.ds-gui-color ul {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+  grid-template-rows: 200px 200px;
+  grid-gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.ds-gui-color ul .color-box {
+  position: relative;
+  padding: 14px;
+  letter-spacing: 0.5px;
+}
+.ds-gui-color ul .color-box span {
+  position: absolute;
+  top: 32px;
+  left: 14px;
+  font-family: "Montserrat-medium", sans-serif;
+  font-size: 0.7rem;
+}
+.ds-gui-color ul .color-box:nth-of-type(1) {
+  background: #ff37f7;
+}
+.ds-gui-color ul .color-box:nth-of-type(2) {
+  background: #FF2E2E;
+}
+.ds-gui-color ul .color-box:nth-of-type(3) {
+  background: #5A20FF;
+}
+.ds-gui-color ul .color-box:nth-of-type(4) {
+  background: #10CB44;
+}
+
+.ds-slider-wrap {
+  overflow: hidden;
+}
+
+.ds-slider {
+  width: 2880px;
+  transition: all 0.5s linear;
+  transform: translateX(4.5vw);
+}
+.ds-slider .ds-slider-item {
+  width: 480px;
+  float: left;
+}
+.ds-slider .ds-slider-item img {
+  width: 100%;
+}
+
+.pn-middle-wrap {
   padding: 10% 3% 3% 5%;
   color: #fff;
 }
-article.pn-middle-wrap h2.pn-middle-title {
+.pn-middle-wrap h2.pn-middle-title {
   font-family: "Montserrat-bold", sans-serif;
   font-size: 2em;
   text-transform: uppercase;
-  text-shadow: 0 0 4px #fff;
+  text-shadow: 0 0 3px #fff;
   letter-spacing: 1px;
 }
-article.pn-middle-wrap p.pn-middle-subTitle {
+.pn-middle-wrap p.pn-middle-subTitle {
   padding: 1em 0;
 }
-article.pn-middle-wrap .middle-img {
+.pn-middle-wrap .middle-img {
   width: 80%;
   margin: 0 auto;
   margin-top: 4em;
@@ -747,6 +856,33 @@ address {
   }
   .design-hero-pg {
     min-height: 840px;
+  }
+  .ds-gui-font dl dd {
+    font-size: 1.8rem;
+  }
+  .ds-gui-font dl dd:nth-of-type(2) {
+    font-size: 1.825rem;
+  }
+  .ds-gui-font dl dd:nth-of-type(3) {
+    font-size: 1.85rem;
+  }
+  .ds-gui-font dl #font-1 {
+    font-size: 1.825rem;
+  }
+  .ds-gui-font dl #font-2 {
+    font-size: 1.85rem;
+  }
+  .ds-gui-font dl #font-3 {
+    font-size: 1.875rem;
+  }
+  .ds-gui-font dl:nth-of-type(2) {
+    margin-top: 6.5em;
+  }
+  .ds-slider {
+    width: 2280px;
+  }
+  .ds-slider .ds-slider-item {
+    width: 380px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -932,6 +1068,49 @@ address {
     height: auto;
     min-height: 612px;
   }
+  .ds-gui-wrap {
+    flex-direction: column;
+  }
+  .ds-gui-font dl {
+    font-size: 1rem;
+  }
+  .ds-gui-font dl:nth-of-type(2) {
+    margin-bottom: 2em;
+  }
+  .ds-gui-font dl dt:nth-of-type(1) {
+    margin-top: 2.5em;
+  }
+  .ds-gui-font dl dd {
+    font-size: 2.5rem;
+  }
+  .ds-gui-font dl dd:nth-of-type(2) {
+    font-size: 2.85rem;
+  }
+  .ds-gui-font dl dd:nth-of-type(3) {
+    font-size: 3rem;
+  }
+  .ds-gui-font dl #font-1 {
+    font-size: 2.5rem;
+  }
+  .ds-gui-font dl #font-2 {
+    font-size: 2.85rem;
+  }
+  .ds-gui-font dl #font-3 {
+    font-size: 3rem;
+  }
+  .ds-gui-font dl:nth-of-type(2) {
+    margin-top: 0;
+  }
+  .ds-gui-color ul {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px 200px;
+  }
+  .ds-slider {
+    width: 1680px;
+  }
+  .ds-slider .ds-slider-item {
+    width: 280px;
+  }
 }
 @media screen and (max-width: 624px) {
   .circle-box .circle .inside {
@@ -946,6 +1125,30 @@ address {
   }
   .pn-hero-wrap > p {
     font-size: 0.5rem;
+  }
+  .ds-gui-font dl:nth-of-type(2) {
+    margin-bottom: 3em;
+  }
+  .ds-gui-font dl dt:nth-of-type(1) {
+    margin-top: 3em;
+  }
+  .ds-gui-font dl dd {
+    font-size: 2rem;
+  }
+  .ds-gui-font dl dd:nth-of-type(2) {
+    font-size: 2.25rem;
+  }
+  .ds-gui-font dl dd:nth-of-type(3) {
+    font-size: 2.5rem;
+  }
+  .ds-gui-font dl #font-1 {
+    font-size: 2rem;
+  }
+  .ds-gui-font dl #font-2 {
+    font-size: 2.25rem;
+  }
+  .ds-gui-font dl #font-3 {
+    font-size: 2.5rem;
   }
 }
 @media screen and (max-width: 524px) {
@@ -967,6 +1170,36 @@ address {
   .design-hero-pg .pn-middle-wrap .pn-middle-subTitle {
     padding: 0;
   }
+  .ds-gui-font dl:nth-of-type(2) {
+    margin-bottom: 2em;
+  }
+  .ds-gui-font dl dt:nth-of-type(1) {
+    margin-top: 2.5em;
+  }
+  .ds-gui-font dl dd {
+    font-size: 1.5rem;
+  }
+  .ds-gui-font dl dd:nth-of-type(2) {
+    font-size: 1.75rem;
+  }
+  .ds-gui-font dl dd:nth-of-type(3) {
+    font-size: 2rem;
+  }
+  .ds-gui-font dl #font-1 {
+    font-size: 1.5rem;
+  }
+  .ds-gui-font dl #font-2 {
+    font-size: 1.75rem;
+  }
+  .ds-gui-font dl #font-3 {
+    font-size: 2rem;
+  }
+  .ds-slider {
+    width: 1080px;
+  }
+  .ds-slider .ds-slider-item {
+    width: 180px;
+  }
 }
 @media screen and (max-width: 412px) {
   .circle-title {
@@ -981,6 +1214,40 @@ address {
   }
   .design-hero-pg {
     min-height: 312px;
+  }
+  .ds-gui-font dl:nth-of-type(2) {
+    margin-bottom: 2em;
+  }
+  .ds-gui-font dl dt:nth-of-type(1) {
+    margin-top: 1em;
+  }
+  .ds-gui-font dl dd {
+    font-size: 1.4rem;
+  }
+  .ds-gui-font dl dd:nth-of-type(2) {
+    font-size: 1.5rem;
+  }
+  .ds-gui-font dl dd:nth-of-type(3) {
+    font-size: 1.6rem;
+  }
+  .ds-gui-font dl #font-1 {
+    font-size: 1.4rem;
+  }
+  .ds-gui-font dl #font-2 {
+    font-size: 1.5rem;
+  }
+  .ds-gui-font dl #font-3 {
+    font-size: 1.6rem;
+  }
+  .ds-gui-color p {
+    margin-bottom: 1em;
+  }
+  .ds-gui-color ul {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 84px);
+    grid-gap: 4px;
+    margin: 0;
+    margin-right: 3%;
   }
 }
 .pn-insight-one {

@@ -64,6 +64,45 @@
     min-height: 840px;
   }
 
+  .ds-gui-font {
+    dl {
+      dd {
+        font-size: 1.8rem;
+
+        &:nth-of-type(2) {
+          font-size: 1.825rem;
+        }
+
+        &:nth-of-type(3) {
+          font-size: 1.85rem;
+        }
+      }
+
+      #font-1 {
+        font-size: 1.825rem;
+      }
+
+      #font-2 {
+        font-size: 1.85rem;
+      }
+
+      #font-3 {
+        font-size: 1.875rem;
+      }
+
+      &:nth-of-type(2) {
+        margin-top: 6.5em;
+      }
+    }
+  }
+
+  .ds-slider {
+    width: 2280px;
+    .ds-slider-item {
+      width: 380px;
+    }
+  }
+
 }
 
 // 너비가 1210이하 일 때
@@ -308,6 +347,67 @@
     height: auto;
     min-height: 612px;
   }
+
+  .ds-gui-wrap {
+    flex-direction: column;
+  }
+
+  .ds-gui-font {
+    dl {
+      font-size: 1rem;
+
+      &:nth-of-type(2) {
+        margin-bottom: 2em;
+      }
+
+      dt:nth-of-type(1) {
+        margin-top: 2.5em;
+      }
+
+      dd {
+        font-size: 2.5rem;
+
+        &:nth-of-type(2) {
+          font-size: 2.85rem;
+        }
+
+        &:nth-of-type(3) {
+          font-size: 3rem;
+        }
+      }
+
+      #font-1 {
+        font-size: 2.5rem;
+      }
+
+      #font-2 {
+        font-size: 2.85rem;
+      }
+
+      #font-3 {
+        font-size: 3rem;
+      }
+
+      &:nth-of-type(2) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .ds-gui-color {
+    ul {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 200px 200px;
+    }
+  }
+
+  .ds-slider {
+    width: 1680px;
+
+    .ds-slider-item {
+      width: 280px;
+    }
+  }
 }
 
 // 너비가 720px이하일 때
@@ -333,6 +433,42 @@
 
     >p {
       font-size: 0.5rem;
+    }
+  }
+
+  .ds-gui-font {
+    dl {
+      &:nth-of-type(2) {
+        margin-bottom: 3em;
+      }
+
+      dt:nth-of-type(1) {
+        margin-top: 3em;
+      }
+
+      dd {
+        font-size: 2rem;
+
+        &:nth-of-type(2) {
+          font-size: 2.25rem;
+        }
+
+        &:nth-of-type(3) {
+          font-size: 2.5rem;
+        }
+      }
+
+      #font-1 {
+        font-size: 2rem;
+      }
+
+      #font-2 {
+        font-size: 2.25rem;
+      }
+
+      #font-3 {
+        font-size: 2.5rem;
+      }
     }
   }
 }
@@ -366,6 +502,49 @@
       }
     }
   }
+
+  .ds-gui-font {
+    dl {
+      &:nth-of-type(2) {
+        margin-bottom: 2em;
+      }
+
+      dt:nth-of-type(1) {
+        margin-top: 2.5em;
+      }
+
+      dd {
+        font-size: 1.5rem;
+
+        &:nth-of-type(2) {
+          font-size: 1.75rem;
+        }
+
+        &:nth-of-type(3) {
+          font-size: 2rem;
+        }
+      }
+
+      #font-1 {
+        font-size: 1.5rem;
+      }
+
+      #font-2 {
+        font-size: 1.75rem;
+      }
+
+      #font-3 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .ds-slider {
+    width: 1080px;
+    .ds-slider-item {
+      width: 180px;
+    }
+  }
 }
 
 @media screen and (max-width: 412px) {
@@ -391,5 +570,55 @@
 
   .design-hero-pg {
     min-height: 312px;
+  }
+
+  .ds-gui-font {
+    dl {
+      &:nth-of-type(2) {
+        margin-bottom: 2em;
+      }
+
+      dt:nth-of-type(1) {
+        margin-top: 1em;
+      }
+
+      dd {
+        font-size: 1.4rem;
+
+        &:nth-of-type(2) {
+          font-size: 1.5rem;
+        }
+
+        &:nth-of-type(3) {
+          font-size: 1.6rem;
+        }
+      }
+
+      #font-1 {
+        font-size: 1.4rem;
+      }
+
+      #font-2 {
+        font-size: 1.5rem;
+      }
+
+      #font-3 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .ds-gui-color {
+    p {
+      margin-bottom: 1em;
+    }
+
+    ul {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 84px);
+      grid-gap: 4px;
+      margin: 0;
+      margin-right: 3%;
+    }
   }
 }
